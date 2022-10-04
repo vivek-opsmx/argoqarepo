@@ -7,20 +7,17 @@ spec:
     - name: testapp
       provider:
         opsmx:
-          gateUrl: https://argoqa.isd-dev.opsmx.net/
+          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           user: admin
-          application: testkavithaapp
+          application: argocd-qa01-40212
           baselineStartTime: "2022-08-20T13:15:00Z"
           lifetimeHours: "0.1"
           threshold: 
             pass: 80
             marginal: 60
           services:
-          - logTemplateName: testLogTemplateName65707
+          - logTemplateName: stackdriver
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
-            metricTemplateName: testmetrictemplate17742
-            metricScopeVariables: "variable1"
-            baselineMetricScope: "service:baseapp"
-            canaryMetricScope: "service:canaryapp"
+
