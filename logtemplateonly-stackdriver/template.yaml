@@ -12,7 +12,7 @@ spec:
           user: admin
           application: analysistest
           baselineStartTime: "2022-08-20T13:15:00Z"
-          lifetimeHours: "0.1"
+          lifetimeMinutes: "6"
           threshold: 
             pass: 80
             marginal: 60
