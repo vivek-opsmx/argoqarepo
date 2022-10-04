@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: canary-demo-ing
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: canary-deploy.oea.opsmx.net 
+    http:
+      paths:
+      - path: /
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: demo-stable-svc
+            port: 
+              number: 80

@@ -1,0 +1,43 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: rollouts-demo-exp-2
+spec:
+  replicas: 3
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: rollouts-demo-exp-2
+  template:
+    metadata:   
+      labels:
+        app: rollouts-demo-exp-2
+    spec:
+      containers:
+        - name: rollouts-demo-exp-2
+          image: docker.io/opsmxdev/issuegen:v3.0.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8088
+  strategy:
+    canary:
+      steps:
+        - setWeight: 20
+        - pause: { duration: 31s }
+        - experiment:
+            analyses:
+              - name : demoapp
+                requiredForCompletion: true
+                templateName: demoapp
+                args:
+                - name: stable-hash
+                  valueFrom:
+                    podTemplateHashValue: Stable
+                - name: canary-hash
+                  valueFrom:
+                    podTemplateHashValue: Latest
+            templates:
+              - name: baseline
+                specRef: stable
+              - name: canary
+                specRef: canary

@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: demoapp
+spec:
+  args:
+  - name: stable-hash
+  - name: canary-hash
+  metrics:
+    - name: demoapp
+      provider:
+        opsmx:
+          user: admin
+          gateUrl: https://ds312.isd-dev.opsmx.net/
+          application: demoapp
+          lifetimeHours: "0.05"
+          threshold:
+            pass: 80
+            marginal: 60
+          services:
+          - servicename: "service1"
+            gatename: "gate1"
+            metricScopeVariables: "job_name"
+            baselineMetricScope: "oes-platform-{{args.stable-hash}}.*"
+            canaryMetricScope: "oes-platform-{{args.canary-hash}}.*"

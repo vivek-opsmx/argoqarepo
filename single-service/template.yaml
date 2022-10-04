@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: multiservice
+spec:
+  metrics:
+    - name: multiservice
+      provider:
+        opsmx:
+          user: admin
+          gateUrl: https://ds312.isd-dev.opsmx.net/
+          application: multiservice
+          lifetimeHours: "0.05"
+          threshold:
+            pass: 80
+            marginal: 60
+          services:
+          - serviceName: "service1"
+            gateName: "gate1"
+            metricScopeVariables: "job_name"
+            baselineMetricScope: "oes-platform-br"
+            canaryMetricScope: "oes-platform-cr"
+          - serviceName: "service2"
+            gateName: "gate2"
+            metricScopeVariables: "job_name"
+            baselineMetricScope: "oes-sapor-br"
+            canaryMetricScope: "oes-sapor-cr"
+            logScopeVariables: "kubernetes.container_name"
+            baselineLogScope: "oes-datascience-br"
+            canaryLogScope: "oes-datascience-cr"

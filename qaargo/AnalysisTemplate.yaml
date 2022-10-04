@@ -1,0 +1,32 @@
+kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: qa-analysis-1
+spec:
+  args:
+    - name: canary-hash
+    - name: baseline-hash
+  metrics:
+    - name: qa-analysis-1
+      count: 1
+      initialDelay: 30s
+      provider:
+        opsmx:
+          gateUrl: https://argoisdqa.isd-dev.opsmx.net/
+          baselineStartTime: "2021-09-03T11:29:46.915Z"
+          canaryStartTime: "2021-09-03T11:29:46.915Z"
+          application:  analysistestapplication
+          user: admin
+          lifetimeHours: "0.1"
+          threshold:
+            pass: 80
+            marginal: 60
+          services:
+          - metricTemplateName: CUSTOMDatadog
+            metricScopeVariables: "variable1"
+            baselineMetricScope: "service:baseapp"
+            canaryMetricScope: "service:canaryapp"
+            logTemplateName: RegularIsdTemp2
+            logScopeVariables: "kubernetes.container_name"
+            baselineLogScope: "baseapp-rest-1"
+            canaryLogScope: "canaryapp-rest-1"

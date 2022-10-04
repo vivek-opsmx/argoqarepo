@@ -1,0 +1,21 @@
+kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: multiservice
+spec:
+  metrics:
+    - name: multiservice
+      count: 1
+      initialDelay: 10s
+      provider:
+        opsmx:
+          application: multiservice
+          lifetimeHours: "0.05"
+          threshold:
+            pass: 80
+            marginal: 60
+          services:
+          - metricScopeVariables: "${namespace_key},${app_name}"
+            baselineMetricScope: "argocd,testapp-rolloutv41"
+            canaryMetricScope: "argocd,testapp-rolloutv41"
+            metricTemplateName: PrometheusMetricTemplate
