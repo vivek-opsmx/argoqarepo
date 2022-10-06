@@ -20,9 +20,21 @@ spec:
           - logTemplateName: testLogTemplateName99652
             logScopeVariables: "resource.labels.container_name"
             baselineLogScope: "baseapp-rest-1"
-            canaryLogScope: "canaryapp-rest-1"            
+            canaryLogScope: "canaryapp-rest-1"
+            serviceName: "StackDriverService1"
           - logTemplateName: testLogTemplateName77961
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
+            serviceName: "ElasticSearchService1"
+          - logTemplateName: testLogTemplateName91830
+            logScopeVariables: "resource.labels.container_name"
+            baselineLogScope: "baseapp-rest-1"
+            canaryLogScope: "canaryapp-rest-1"
+            serviceName: "StackDriverService2"
+          - logTemplateName: testLogTemplateName26136
+            logScopeVariables: "kubernetes.container_name"
+            baselineLogScope: "baseapp-rest-1"
+            canaryLogScope: "canaryapp-rest-1"
+            serviceName: "ElasticSearchService2"
 
