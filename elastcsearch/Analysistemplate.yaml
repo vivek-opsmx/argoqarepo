@@ -10,16 +10,18 @@ spec:
       count: 1
       provider:
         opsmx:
-          gateUrl: https://argoqa-helm.isd-dev.opsmx.net
-          application: demoapphash
+          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          application: analysisapplication
+          baselineStartTime: "2021-11-03T11:29:46.915Z"
+          canaryStartTime: "2021-11-03T11:29:46.915Z" 
           user: admin
-          lifetimeHours: "0.05"
+          lifetimeHours: "0.1"
           threshold:
             pass: 80
             marginal: 60
           services:
-          - serviceName: service1
-            logTemplateName: stacktemplate
-            logScopeVariables: "resource.labels.container_name"
-            baselineLogScope: "issuegen-prod"
-            canaryLogScope: "issuegen-prod"
+          - serviceName: elksvc1
+            logTemplateName: oct6logtemp
+            logScopeVariables: "kubernetes.container_name"
+            baselineLogScope: "baseapp-rest-1"
+            canaryLogScope: "canaryapp-rest-1"
