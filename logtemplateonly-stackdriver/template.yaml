@@ -10,7 +10,7 @@ spec:
           profile: "opsmx-profile"
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           user: admin
-          application: analysistest
+          application: testforhelm
           baselineStartTime: "2022-08-20T13:15:00Z"
           lifetimeMinutes: 6
           threshold: 
