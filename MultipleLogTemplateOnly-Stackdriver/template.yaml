@@ -20,10 +20,5 @@ spec:
           - logTemplateName: Stackdriver-AccName25235
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
-            canaryLogScope: "canaryapp-rest-1"
-            
-          - logTemplateName: stackdriver
-            logScopeVariables: "kubernetes.container_name"
-            baselineLogScope: "baseapp-rest-1"
-            canaryLogScope: "canaryapp-rest-1"
+            canaryLogScope: "canaryapp-rest-1"     
 
