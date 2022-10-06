@@ -7,7 +7,7 @@ spec:
     - name: testapp
       provider:
         opsmx:
-          profile: opsmx-profile
+          profile: "opsmx-profile"
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           user: admin
           application: analysistest
