@@ -10,15 +10,19 @@ spec:
           profile: opsmx-profile
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           user: admin
-          application: argocd-qa01-59800
+          application: argocd-qa01-42454
           baselineStartTime: "2022-08-20T13:15:00Z"
           lifetimeMinutes: "6"
           threshold: 
             pass: 80
             marginal: 60
           services:
-          - logTemplateName: Stackdriver-AccName25235
+          - logTemplateName: testLogTemplateName99652
+            logScopeVariables: "resource.labels.container_name"
+            baselineLogScope: "baseapp-rest-1"
+            canaryLogScope: "canaryapp-rest-1"            
+          - logTemplateName: testLogTemplateName77961
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
-            canaryLogScope: "canaryapp-rest-1"     
+            canaryLogScope: "canaryapp-rest-1"
 
