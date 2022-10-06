@@ -33,7 +33,7 @@ spec:
               - name: baseline
                 specRef: stable
               - name: canary
-                specRef: canary
+                specRef: latest
         - setWeight: 50
         - pause: { duration: 45s }
         - experiment:
@@ -45,4 +45,4 @@ spec:
               - name: baseline
                 specRef: stable
               - name: canary
-                specRef: canary
+                specRef: latest
