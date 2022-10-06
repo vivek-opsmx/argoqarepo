@@ -7,7 +7,6 @@ spec:
     - name: testappss
       provider:
         opsmx:
-          profile: opsmx-profile
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           user: admin
           application: argocd-qa01-59038
