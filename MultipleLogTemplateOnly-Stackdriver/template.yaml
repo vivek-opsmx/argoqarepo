@@ -12,6 +12,7 @@ spec:
           user: admin
           application: argocd-qa01-42454
           baselineStartTime: "2022-08-20T13:15:00Z"
+          canaryStartTime: "2022-08-20T13:15:00Z"
           lifetimeMinutes: "6"
           threshold: 
             pass: 80
