@@ -15,7 +15,7 @@ spec:
         prometheus_io_path: '/mgmt/prometheus'
         prometheus_io_port: '8088'    
       labels:
-        app: argotestss
+        app: argotestsss
     spec:
       containers:
         - name: rollouts-baseline
