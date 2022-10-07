@@ -11,8 +11,8 @@ spec:
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           user: admin
           application: argocd-qa01-17394
-          baselineStartTime: "2021-11-03T11:29:46Z"
-          canaryStartTime: "2021-11-03T11:29:46Z"
+          baselineStartTime: "2021-11-03T11:29:46.915Z"
+          canaryStartTime: "2021-11-03T11:29:46.915Z"
           lifetimeMinutes: 6
           threshold: 
             pass: 80
