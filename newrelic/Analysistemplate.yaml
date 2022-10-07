@@ -10,16 +10,16 @@ spec:
           profile: "opsmx-profile"
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           user: admin
-          application: splunckapp
-          baselineStartTime: "2022-03-08T16:16:00:00Z"
-          canaryStartTime: "2022-03-08T16:16:00:00Z"
+          application: newrelic1
+          baselineStartTime: "2022-09-26T04:17:00.002Z"
+          canaryStartTime: "2022-09-26T04:17:00.002Z"
           lifetimeMinutes: 6
           threshold: 
             pass: 80
             marginal: 60
           services:
-          - logTemplateName: spluncktemp
-            logScopeVariables: " kubernetes.container_name"
-            baselineLogScope: "oes-platform-br"
-            canaryLogScope: "oes-platform-cr"
+          - logTemplateName: newreliccustom
+            logScopeVariables: "app_key,pod_key"
+            baselineLogScope: "issugen-baseline,6944b5c7df"
+            canaryLogScope: "issugen-baseline,76f78f85ff"
 
