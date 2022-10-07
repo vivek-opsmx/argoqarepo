@@ -38,7 +38,7 @@ spec:
         - pause: { duration: 45s }
         - experiment:
             analyses:
-              - name : testapp
+              - name : testapps
                 requiredForCompletion: true
                 templateName: testapp
             templates:
