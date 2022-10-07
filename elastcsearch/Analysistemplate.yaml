@@ -11,7 +11,7 @@ spec:
       provider:
         opsmx:
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
-          application: elasicsearchapp1
+          application: elastic1
           baselineStartTime: "2021-11-03T11:29:46.915Z"
           canaryStartTime: "2021-11-03T11:29:46.915Z" 
           user: admin
