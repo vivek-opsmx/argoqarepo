@@ -10,12 +10,13 @@ spec:
       count: 1
       provider:
         opsmx:
+          profile: "opsmx-profile"
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           application: elastic1
           baselineStartTime: "2021-11-03T11:29:46.915Z"
           canaryStartTime: "2021-11-03T11:29:46.915Z" 
           user: admin
-          lifetimeHours: "0.1"
+          lifetimeMinutes: 6
           threshold:
             pass: 80
             marginal: 60
