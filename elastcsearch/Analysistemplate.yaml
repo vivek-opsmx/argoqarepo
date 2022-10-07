@@ -7,7 +7,6 @@ spec:
     - name: experiment-hash
   metrics:
     - name: oes-analysis
-      count: 1
       provider:
         opsmx:
           profile: "opsmx-profile"
@@ -21,8 +20,7 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - serviceName: elksvc1
-            logTemplateName: oct6logtemp
+          - logTemplateName: oct6logtemp
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"

@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: testapps
+spec:
+  metrics:
+    - name: testapps
+      provider:
+        opsmx:
+          profile: "opsmx-profile"
+          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          user: admin
+          application: argocd-qa01-13852
+          baselineStartTime: "2022-09-26T04:17:00.002Z"
+          canaryStartTime: "2022-09-26T04:17:00.002Z"
+          lifetimeMinutes: 6
+          threshold: 
+            pass: 80
+            marginal: 60
+          services:
+          - metricTemplateName: metrictemplateNewrelic
+            metricScopeVariables: "app_key,pod_key"
+            baselineMetricScope: "issugen-baseline,6944b5c7df"
+            canaryMetricScope: "issugen-baseline,76f78f85ff"
