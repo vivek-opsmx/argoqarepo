@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: argotestsss
+  name: argotestssss
 spec:
   replicas: 4
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: argotestsss
+      app: argotestssss
   template:
     metadata:
       annotations:
@@ -15,7 +15,7 @@ spec:
         prometheus_io_path: '/mgmt/prometheus'
         prometheus_io_port: '8088'    
       labels:
-        app: argotestsss
+        app: argotestssss
     spec:
       containers:
         - name: rollouts-baseline
@@ -30,7 +30,7 @@ spec:
         - pause: { duration: 30s }
         - analysis:
             templates:
-              - templateName: testappsss
+              - templateName: testappssss
             args:
               - name: canary-hash
                 valueFrom:
@@ -42,7 +42,7 @@ spec:
         - pause: { duration: 30s }
         - analysis:
             templates:
-              - templateName: testappsss
+              - templateName: testappssss
             args:
               - name: canary-hash
                 valueFrom:
