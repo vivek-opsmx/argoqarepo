@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: testappsss
+spec:
+  metrics:
+    - name: testappsss
+      provider:
+        opsmx:
+          profile: "opsmx-profile"
+          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          user: admin
+          application: argocd-qa01-17394
+          baselineStartTime: "2021-11-03T11:29:46Z"
+          canaryStartTime: "2021-11-03T11:29:46Z"
+          lifetimeMinutes: 6
+          threshold: 
+            pass: 80
+            marginal: 60
+          services:
+          - metricTemplateName: metricTemplateDatadog01
+            metricScopeVariables: "variable1"
+            baselineMetricScope: "service:baseapp"
+            canaryMetricScope: "service:canaryapp"
+            serviceName: "MetricServiceDatadog"        
+
