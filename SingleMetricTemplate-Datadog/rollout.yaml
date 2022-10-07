@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: argotestss
+  name: argotestsss
 spec:
   replicas: 4
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: argotestss
+      app: argotestsss
   template:
     metadata:
       annotations:
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: rollouts-baseline
-          image: docker.io/opsmxdev/issuegen:v3.0.4
+          image: docker.io/opsmxdev/issuegen:v3.0.5
           imagePullPolicy: Always
           ports:
             - containerPort: 8088
@@ -30,7 +30,7 @@ spec:
         - pause: { duration: 30s }
         - analysis:
             templates:
-              - templateName: testappss
+              - templateName: testappsss
             args:
               - name: canary-hash
                 valueFrom:
@@ -42,7 +42,7 @@ spec:
         - pause: { duration: 30s }
         - analysis:
             templates:
-              - templateName: testappss
+              - templateName: testappsss
             args:
               - name: canary-hash
                 valueFrom:
