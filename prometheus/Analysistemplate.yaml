@@ -13,7 +13,7 @@ spec:
           application: prom1
           baselineStartTime: "2022-06-06T12:40:57Z"
           canaryStartTime: "2022-06-06T12:40:57Z"
-          lifetimeMinutes: 6
+          lifetimeMinutes: 12
           threshold: 
             pass: 80
             marginal: 60
