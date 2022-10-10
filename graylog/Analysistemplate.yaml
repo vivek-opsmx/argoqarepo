@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: testapp
+spec:
+  metrics:
+    - name: testapp
+      provider:
+        opsmx:
+          profile: "opsmx-profile"
+          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          user: admin
+          application: graylog1
+          baselineStartTime: "2022-02-07T08:15:37Z"
+          canaryStartTime: "2022-02-07T08:15:37Z"
+          lifetimeMinutes: 6
+          threshold: 
+            pass: 80
+            marginal: 60
+          services:
+          - logTemplateName: graylogtemp
+            logScopeVariables: "container_name"
+            baselineLogScope: "oes-platform-br"
+            canaryLogScope: "oes-platform-cr"
+
