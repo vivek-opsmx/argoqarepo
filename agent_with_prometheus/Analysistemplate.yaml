@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: testapp
+spec:
+  metrics:
+    - name: testapp
+      provider:
+        opsmx:
+          profile: "opsmx-profile"
+          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          user: admin
+          application: prometheusqa
+          baselineStartTime: "2022-06-06T12:40:57Z"
+          canaryStartTime: "2022-06-06T12:40:57Z"
+          lifetimeMinutes: 6
+          threshold: 
+            pass: 80
+            marginal: 60
+          services:
+          - metricTemplateName: promtempqa
+            metricScopeVariables: "namespace_key"
+            baselineMetricScope: "baseline"
+            canaryMetricScope: "canary"
