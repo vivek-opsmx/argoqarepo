@@ -10,7 +10,7 @@ spec:
           profile: "opsmx-profile"
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           user: admin
-          application: datadog1
+          application: prom1
           baselineStartTime: "2021-11-03T11:29:46.915Z"
           canaryStartTime: "2021-11-03T11:29:46.915Z"
           lifetimeMinutes: 6
@@ -18,7 +18,7 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: datadogcustom
-            metricScopeVariables: "variable1"
-            baselineMetricScope: "service:baseapp"
-            canaryMetricScope: "service:canaryapp"
+          - metricTemplateName: promtemp
+            metricScopeVariables: "job_name"
+            baselineMetricScope: "oes-autopilot-br"
+            canaryMetricScope: "oes-autopilot-cr"
