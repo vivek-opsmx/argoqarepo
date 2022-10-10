@@ -18,7 +18,7 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: promtempqa
+          - metricTemplateName: promwithagent-promtempqa
             metricScopeVariables: "namespace_key"
             baselineMetricScope: "baseline"
             canaryMetricScope: "canary"
