@@ -1,24 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: oes-argo-rollout
+  name: argotest
 spec:
-  replicas: 4
+  replicas: 1
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: rollouts-demo-exp-2
+      app: argotest
   template:
-    metadata:
-      annotations:
-        prometheus.io/scrape: 'true'
-        prometheus_io_path: '/mgmt/prometheus'
-        prometheus_io_port: '8088'    
+    metadata:   
       labels:
-        app: rollouts-demo-exp-2
+        app: argotest
     spec:
       containers:
-        - name: rollouts-baseline
+        - name: rollouts-demo-exp
           image: docker.io/opsmxdev/issuegen:v3.0.9
           imagePullPolicy: Always
           ports:
@@ -26,36 +22,27 @@ spec:
   strategy:
     canary:
       steps:
-        - setWeight: 20
-        - pause: { duration: 2s }
+        - setWeight: 25
+        - pause: { duration: 45s }
         - experiment:
+            analyses:
+              - name : testapp
+                requiredForCompletion: true
+                templateName: testapp
             templates:
               - name: baseline
                 specRef: stable
               - name: canary
                 specRef: canary
-            analyses:
-              - name : oes-analysis
-                requiredForCompletion: true
-                templateName: oes-analysis
-                args:
-                  - name: experiment-hash
-                    valueFrom:
-                      podTemplateHashValue: Latest
-        - setWeight: 60
-        - pause: { duration: 60s }
+        - setWeight: 50
+        - pause: { duration: 45s }
         - experiment:
+            analyses:
+              - name : testapp
+                requiredForCompletion: true
+                templateName: testapp
             templates:
               - name: baseline
                 specRef: stable
               - name: canary
                 specRef: canary
-            analyses:
-              - name : oes-analysis
-                requiredForCompletion: true
-                templateName: oes-analysis
-                args:
-                  - name: experiment-hash
-                    valueFrom: 
-                      podTemplateHashValue: Latest
-        - setWeight: 90
