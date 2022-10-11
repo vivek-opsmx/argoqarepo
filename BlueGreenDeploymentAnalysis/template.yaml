@@ -12,7 +12,7 @@ spec:
       provider:
         opsmx:
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
-          application: argocd-qa01-bluegreenkavitha56418
+          application: argocd-qa01-bluegreenkavitha22558
           user: admin
           lifetimeMinutes: 3
           threshold:
