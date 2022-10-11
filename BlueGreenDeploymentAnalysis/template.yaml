@@ -20,7 +20,7 @@ spec:
             marginal: 60
           services:
           - metricTemplateName: prometheusbluegreenanalysis1
-            metricTemplateVersion: "v2.0"
+            metricTemplateVersion: "v1.0"
             metricScopeVariables: "namespace_key,pod_key"
             baselineMetricScope: "argocd,.*5ffd47b8d4.*" 
             canaryMetricScope: "argocd,.*{{args.preview-hash}}.*"
