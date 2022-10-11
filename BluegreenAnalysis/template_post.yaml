@@ -15,6 +15,7 @@ spec:
           application: bluegreen
           user: admin
           lifetimeMinutes: 3
+          baselineStartTime: "2021-11-03T11:29:46.915Z"
           threshold:
             pass: 80
             marginal: 60
