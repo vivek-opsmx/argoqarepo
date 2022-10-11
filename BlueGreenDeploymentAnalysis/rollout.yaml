@@ -23,8 +23,8 @@ spec:
         - containerPort: 8080
   strategy:
     blueGreen: 
-      activeService: argotests-active
-      previewService: argotests-preview
+      activeService: rollout-bluegreen-active
+      previewService: rollout-bluegreen-preview
       autoPromotionSeconds: 30
       prePromotionAnalysis:
         templates:
