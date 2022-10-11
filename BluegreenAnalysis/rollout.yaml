@@ -1,48 +1,49 @@
+# This example demonstrates a Rollout using the blue-green update strategy, which contains a manual
+# gate before promoting the new stack.
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: argotest
+  name: rollout-bluegreen
 spec:
-  replicas: 1
+  replicas: 2
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: argotest
+      app: rollout-bluegreen
   template:
-    metadata:   
+    metadata:
       labels:
-        app: argotest
+        app: rollout-bluegreen
     spec:
       containers:
-        - name: rollouts-demo-exp
-          image: docker.io/opsmxdev/issuegen:v3.0.9
-          imagePullPolicy: Always
-          ports:
-            - containerPort: 8088
+      - name: rollouts-demo
+        image: argoproj/rollouts-demo:green
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
   strategy:
-    canary:
-      steps:
-        - setWeight: 25
-        - pause: { duration: 45s }
-        - experiment:
-            analyses:
-              - name : testapp
-                requiredForCompletion: true
-                templateName: testapp
-            templates:
-              - name: baseline
-                specRef: stable
-              - name: canary
-                specRef: canary
-        - setWeight: 50
-        - pause: { duration: 45s }
-        - experiment:
-            analyses:
-              - name : testapp
-                requiredForCompletion: true
-                templateName: testapp
-            templates:
-              - name: baseline
-                specRef: stable
-              - name: canary
-                specRef: canary
+    blueGreen: 
+      activeService: rollout-bluegreen-active
+      previewService: rollout-bluegreen-preview
+      autoPromotionSeconds: 30
+      prePromotionAnalysis:
+        templates:
+        - templateName: isd-analysis-bg-v1
+        args:
+        - name: baseline-hash
+          valueFrom:
+            podTemplateHashValue: Stable
+        - name: preview-hash
+          valueFrom:
+            podTemplateHashValue: Latest
+      autoPromotionEnabled: false
+      postPromotionAnalysis:
+        templates:
+        - templateName: isd-analysis-bg-post
+        args:
+        - name: baseline-hash
+          valueFrom:
+            podTemplateHashValue: Stable
+        - name: preview-hash
+          valueFrom:
+            podTemplateHashValue: Latest
