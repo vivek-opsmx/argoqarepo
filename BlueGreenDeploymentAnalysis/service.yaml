@@ -4,7 +4,7 @@ metadata:
   name: rollout-bluegreen-active
 spec:
   selector:
-    app: rollout-bluegreen
+    app: argotests
   ports:
   - protocol: TCP
     port: 80
