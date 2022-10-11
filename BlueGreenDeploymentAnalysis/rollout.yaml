@@ -3,13 +3,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: argotests
+  name: argotestss
 spec:
   replicas: 4
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: argotests
+      app: argotestss
   template:
     metadata:
       annotations:
@@ -32,7 +32,7 @@ spec:
       autoPromotionSeconds: 30
       prePromotionAnalysis:
         templates:
-        - templateName: testapps
+        - templateName: testappss
         args:
         - name: baseline-hash
           valueFrom:
@@ -43,7 +43,7 @@ spec:
       autoPromotionEnabled: true
       postPromotionAnalysis:
         templates:
-        - templateName: isd-analysis-bg-post
+        - templateName: isd-analysis-bg-posts
         args:
         - name: baseline-hash
           valueFrom:
