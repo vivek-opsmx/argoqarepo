@@ -11,7 +11,7 @@ spec:
       provider:
         opsmx:
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net
-          application: stackanalysis
+          application: testingqa1
           baselineStartTime: "2022-09-16T06:10:00Z"
           canaryStartTime: "2022-09-19T08:06:00Z" 
           user: admin
@@ -21,7 +21,7 @@ spec:
             marginal: 60
           services:
           - serviceName: service1
-            logTemplateName: stacktemplate
+            logTemplateName: logstackdriverqa1
             logScopeVariables: "resource.labels.container_name"
             baselineLogScope: "issuegen-prod"
             canaryLogScope: "issuegen-prod"
