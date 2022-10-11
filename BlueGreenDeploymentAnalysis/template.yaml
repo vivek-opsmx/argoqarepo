@@ -1,13 +1,13 @@
 kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: testapps
+  name: testappss
 spec:
   args:
     - name: preview-hash
     - name: baseline-hash
   metrics:
-    - name: testapps
+    - name: testappss
       count: 1
       provider:
         opsmx:
