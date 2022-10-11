@@ -22,12 +22,13 @@ spec:
           threshold:
             pass: 80
             marginal: 60
+          globalMetricTemplate: prominterval
+          globalLogTemplate: mkrlogtemp
           services:
-          - logTemplateName: mkrlogtemp
-            logScopeVariables: "kubernetes.pod_name"
+          - logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
-            metricTemplateName: prominterval
+            metricTemplateName: "prominterval"
             metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
             canaryMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
