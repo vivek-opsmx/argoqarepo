@@ -16,7 +16,7 @@ spec:
   ipFamilyPolicy: SingleStack
   ports:
   - name: baseline
-    nodePort: 30525
+    nodePort: 30900
     port: 8088
     protocol: TCP
     targetPort: 8088
