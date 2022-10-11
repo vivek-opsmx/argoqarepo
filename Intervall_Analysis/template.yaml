@@ -12,7 +12,7 @@ spec:
       initialDelay: 10s
       provider:
         opsmx:
-          profile: opsmx-profile-v3
+          profile: opsmx-profile
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           application: intervaltests
           user: admin
