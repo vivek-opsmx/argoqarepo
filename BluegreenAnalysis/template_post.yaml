@@ -21,7 +21,6 @@ spec:
           services:
           - serviceName: service1
             metricTemplateName: prometheusbluegreenanalysis
-            metricTemplateVersion: "v2.0"
             metricScopeVariables: "namespace_key,pod_key"
             baselineMetricScope: "argocd,.*{{args.baseline-hash}}.*" 
             canaryMetricScope: "argocd,.*{{args.preview-hash}}.*
