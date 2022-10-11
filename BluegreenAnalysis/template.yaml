@@ -12,7 +12,7 @@ spec:
       provider:
         opsmx:
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
-          application: bluegreen
+          application: newbluegreen
           user: admin
           lifetimeMinutes: 3
           threshold:
