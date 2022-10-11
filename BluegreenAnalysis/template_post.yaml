@@ -19,7 +19,7 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - serviceName: service1
+          - serviceName: 
             metricTemplateName: prometheusbluegreenanalysis
             metricScopeVariables: "namespace_key,pod_key"
             baselineMetricScope: "argocd,.*{{args.baseline-hash}}.*" 
