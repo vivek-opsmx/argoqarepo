@@ -40,7 +40,7 @@ spec:
         - name: preview-hash
           valueFrom:
             podTemplateHashValue: Latest
-      autoPromotionEnabled: false
+      autoPromotionEnabled: true
       postPromotionAnalysis:
         templates:
         - templateName: isd-analysis-bg-post
