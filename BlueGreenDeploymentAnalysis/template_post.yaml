@@ -14,7 +14,7 @@ spec:
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           application: argocd-qa01-bluegreenkavitha56418
           user: admin
-          lifetimeHours: "0.05"
+          lifetimeMinutes: 6
           baselineStartTime: "2022-09-26T13:15:35Z"
           threshold:
             pass: 80
