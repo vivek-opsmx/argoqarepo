@@ -1,24 +1,32 @@
-apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: testapp
+  name: oes-analysis
 spec:
+  args:
+    - name: experiment-hash
   metrics:
-    - name: testapp
+    - name: oes-analysis
       provider:
         opsmx:
           profile: "opsmx-profile"
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          application: elastic1
+          baselineStartTime: "2021-11-03T11:29:46.915Z"
+          canaryStartTime: "2021-11-03T11:29:46.915Z" 
           user: admin
-          application: prometheusqa
-          baselineStartTime: "2022-06-06T12:40:57Z"
-          canaryStartTime: "2022-06-06T12:40:57Z"
           lifetimeMinutes: 6
-          threshold: 
+          intervalTime: 3
+          lookBackType: growing
+          threshold:
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: promtempqa
-            metricScopeVariables: "namespace_key"
-            baselineMetricScope: "baseline"
-            canaryMetricScope: "canary"
+          - logTemplateName: oct6logtemp
+            logScopeVariables: "kubernetes.container_name"
+            baselineLogScope: "baseapp-rest-1"
+            canaryLogScope: "canaryapp-rest-1"
+            metricTemplateName: datadogcustom
+            metricScopeVariables: "variable1"
+            baselineMetricScope: "service:baseapp"
+            canaryMetricScope: "service:canaryapp"
