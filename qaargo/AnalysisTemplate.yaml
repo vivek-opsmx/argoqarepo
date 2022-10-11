@@ -17,7 +17,7 @@ spec:
           canaryStartTime: "2021-09-03T11:29:46.915Z"
           application:  analysistestapplication
           user: admin
-          lifetimeHours: "0.1"
+          lifetimeMinutes: 6
           threshold:
             pass: 80
             marginal: 60
