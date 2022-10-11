@@ -9,11 +9,11 @@ spec:
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: argotestss
+      app: argotests
   template:
     metadata:
       labels:
-        app: argotestss
+        app: argotests
     spec:
       containers:
       - name: rollouts-demo
@@ -23,8 +23,8 @@ spec:
         - containerPort: 8080
   strategy:
     blueGreen: 
-      activeService: argotestss-active
-      previewService: argotestss-preview
+      activeService: argotests-active
+      previewService: argotests-preview
       autoPromotionSeconds: 30
       prePromotionAnalysis:
         templates:
