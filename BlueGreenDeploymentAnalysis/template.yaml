@@ -22,7 +22,7 @@ spec:
           - metricTemplateName: prometheusbluegreenanalysis1
             metricTemplateVersion: "v1.0"
             metricScopeVariables: "namespace_key,pod_key"
-            baselineMetricScope: "argocd,.*5ffd47b8d4.*" 
+            baselineMetricScope: "argocd,.*97c95d47d.*" 
             canaryMetricScope: "argocd,.*{{args.preview-hash}}.*"
             serviceName: prometheousservice
             
