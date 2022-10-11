@@ -1,0 +1,27 @@
+kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: isd-analysis-bg-v1
+spec:
+  args:
+    - name: preview-hash
+    - name: baseline-hash
+  metrics:
+    - name: isd-analysis-bg-v1
+      count: 1
+      provider:
+        opsmx:
+          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          application: bluegreenqa
+          user: admin
+          lifetimeMinutes: 3
+          threshold:
+            pass: 80
+            marginal: 60
+          services:
+          - serviceName: service1
+            metricTemplateName: prometheusbluegreenanalysis
+            metricTemplateVersion: "v2.0"
+            metricScopeVariables: "namespace_key,pod_key"
+            baselineMetricScope: "argocd,.*{{args.baseline-hash}}.*" 
+            canaryMetricScope: "argocd,.*{{args.preview-hash}}.*"
