@@ -8,7 +8,7 @@ metadata:
     ingress.kubernetes.io/app-root: /
 spec:
   rules:
-  - host: http://issuegen-argo.aoa.oes.opsmx.org/
+  - host: issuegen-argo.aoa.oes.opsmx.org/
     http:
       paths:
       - path: /
