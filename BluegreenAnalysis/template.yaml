@@ -11,7 +11,7 @@ spec:
       count: 1
       provider:
         opsmx:
-          gateUrl: https://argocd-helm.isd-dev.opsmx.net/
+          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           application: bluegreen
           user: admin
           lifetimeMinutes: 6
