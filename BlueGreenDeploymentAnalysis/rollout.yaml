@@ -3,17 +3,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: argotests
+  name: argotestss
 spec:
   replicas: 4
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: argotests
+      app: argotestss
   template:
     metadata:
       labels:
-        app: argotests
+        app: argotestss
     spec:
       containers:
       - name: rollouts-demo
@@ -23,8 +23,8 @@ spec:
         - containerPort: 8080
   strategy:
     blueGreen: 
-      activeService: rollout-bluegreen-active
-      previewService: rollout-bluegreen-preview
+      activeService: argotestss-active
+      previewService: argotestss-preview
       autoPromotionSeconds: 30
       prePromotionAnalysis:
         templates:
