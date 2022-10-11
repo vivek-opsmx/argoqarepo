@@ -8,13 +8,13 @@ metadata:
     ingress.kubernetes.io/app-root: /
 spec:
   rules:
-  - host: demo-v41-issuegen.autopilot.opsmx.com
+  - host: issuegen-argo.aoa.oes.opsmx.org
     http:
       paths:
       - path: /
         pathType: ImplementationSpecific
         backend:
           service:
-            name: demoapp-issuegen
+            name: issuegen
             port:
               number: 80
