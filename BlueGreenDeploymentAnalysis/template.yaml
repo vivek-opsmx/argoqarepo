@@ -1,0 +1,27 @@
+kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: isd-analysis-bg-v1
+spec:
+  args:
+    - name: preview-hash
+    - name: baseline-hash
+  metrics:
+    - name: isd-analysis-bg-v1
+      count: 1
+      provider:
+        opsmx:
+          gateUrl: https://argocd-helm.isd-dev.opsmx.net/
+          application: bluegreen
+          user: admin
+          lifetimeHours: "0.05"
+          threshold:
+            pass: 80
+            marginal: 60
+          services:
+          - serviceName: service1
+            logTemplateName: bluegreeelk
+            logTemplateVersion: "v3.0"
+            logScopeVariables: "kubernetes.container_name"
+            baselineLogScope: "baseapp-rest-1" 
+            canaryLogScope: "canaryapp-rest-1"
