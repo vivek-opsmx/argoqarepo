@@ -11,18 +11,19 @@ spec:
       count: 1
       provider:
         opsmx:
-          gateUrl: https://isd-demo.argo-dev.opsmx.net//
-          application: demo-bg-app
+          gateUrl: https://argocd-helm.isd-dev.opsmx.net/
+          application: bluegreen
+          baselineStartTime: "2021-11-03T11:29:46.915Z"
+          canaryStartTime: "2021-11-03T11:29:46.915Z"
           user: admin
-          lifetimeHours: "0.05"
+          lifetimeMinutes: 6
           baselineStartTime: "2022-09-26T13:15:35Z"
           threshold:
             pass: 80
             marginal: 60
           services:
           - serviceName: service1
-            metricTemplateName: PrometheusTemplateTest
-            metricTemplateVersion: "v4.0"
-            metricScopeVariables: "namespace_key,pod_key"
-            baselineMetricScope: "argocd,.*5ffd47b8d4.*" 
-            canaryMetricScope: "argocd,.*{{args.preview-hash}}.*"
+            logTemplateName: bluegreeelk
+            logScopeVariables: "kubernetes.container_name"
+            baselineLogScope: "baseapp-rest-1" 
+            canaryLogScope: "canaryapp-rest-1"
