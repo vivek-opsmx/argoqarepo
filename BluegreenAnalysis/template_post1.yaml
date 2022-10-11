@@ -24,4 +24,4 @@ spec:
             metricTemplateName: prometheusbluegreenanalysis
             metricScopeVariables: "namespace_key,pod_key"
             baselineMetricScope: "argocd,.*{{args.baseline-hash}}.*" 
-            canaryMetricScope: "argocd,.*{{args.preview-hash}}.*
+            canaryMetricScope: "argocd,.*{{args.preview-hash}}.*"
