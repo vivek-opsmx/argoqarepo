@@ -19,7 +19,6 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - serviceName: 
             metricTemplateName: prometheusbluegreenanalysis
             metricTemplateVersion: "v2.0"
             metricScopeVariables: "namespace_key,pod_key"
