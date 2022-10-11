@@ -11,7 +11,7 @@ spec:
       count: 1
       provider:
         opsmx:
-          gateUrl: https://argocd-helm.isd-dev.opsmx.net/
+          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           application: bluegreen
           baselineStartTime: "2021-11-03T11:29:46.915Z"
           canaryStartTime: "2021-11-03T11:29:46.915Z"
