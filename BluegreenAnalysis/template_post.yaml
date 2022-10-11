@@ -13,16 +13,16 @@ spec:
         opsmx:
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           application: bluegreen
-          baselineStartTime: "2021-11-03T11:29:46.915Z"
-          canaryStartTime: "2021-11-03T11:29:46.915Z"
           user: admin
+          baselineStartTime: "2022-09-26T13:15:35Z"
           lifetimeMinutes: 3
           threshold:
             pass: 80
             marginal: 60
           services:
           - serviceName: service1
-            logTemplateName: bluegreeelk
-            logScopeVariables: "kubernetes.container_name"
-            baselineLogScope: "baseapp-rest-1"
-            canaryLogScope: "canaryapp-rest-1"
+            metricTemplateName: prometheusbluegreenanalysis
+            metricTemplateVersion: "v2.0"
+            metricScopeVariables: "namespace_key,pod_key"
+            baselineMetricScope: "argocd,.*{{args.baseline-hash}}.*" 
+            canaryMetricScope: "argocd,.*{{args.preview-hash}}.*
