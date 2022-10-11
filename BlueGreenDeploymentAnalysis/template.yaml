@@ -19,7 +19,7 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: PrometheusTemplateTest
+          - metricTemplateName: prometheusbluegreenanalysis1
             metricTemplateVersion: "v2.0"
             metricScopeVariables: "namespace_key,pod_key"
             baselineMetricScope: "argocd,.*5ffd47b8d4.*" 
