@@ -3,17 +3,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: rollout-bluegreen
+  name: argotests
 spec:
   replicas: 2
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: rollout-bluegreen
+      app: argotests
   template:
     metadata:
       labels:
-        app: rollout-bluegreen
+        app: argotests
     spec:
       containers:
       - name: rollouts-demo
@@ -28,7 +28,7 @@ spec:
       autoPromotionSeconds: 30
       prePromotionAnalysis:
         templates:
-        - templateName: isd-analysis-bg-v1
+        - templateName: testapps
         args:
         - name: baseline-hash
           valueFrom:
