@@ -17,7 +17,7 @@ metadata:
   name: rollout-bluegreen-preview
 spec:
   selector:
-    app: rollout-bluegreen
+    app: argotests
   ports:
   - protocol: TCP
     port: 80
