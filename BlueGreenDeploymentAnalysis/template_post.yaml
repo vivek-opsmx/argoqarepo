@@ -1,13 +1,13 @@
 kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: isd-analysis-bg-post
+  name: isd-analysis-bg-posts
 spec:
   args:
     - name: preview-hash
     - name: baseline-hash
   metrics:
-    - name: isd-analysis-bg-post
+    - name: isd-analysis-bg-posts
       count: 1
       provider:
         opsmx:
