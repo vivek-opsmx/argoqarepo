@@ -22,8 +22,8 @@ spec:
           threshold:
             pass: 80
             marginal: 60
-          globalMetricTemplate: prominterval
-          globalLogTemplate: mkrlogtemp
+          globalMetricTemplate: liveprom
+          globalLogTemplate: liveelk
           services:
           - logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
