@@ -12,9 +12,9 @@ spec:
       initialDelay: 10s
       provider:
         opsmx:
-          profile: opsmx-profile-v3
-          gateUrl: https://isd-dev.argo-dev.opsmx.net/
-          application: rajtest
+          profile: opsmx-profile
+          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          application: newlivetestdata
           lifetimeMinutes: 9
           user: admin
           intervalTime: 3
@@ -23,11 +23,11 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - logTemplateName: logtemp
+          - logTemplateName: intervalanalysislogtemp
             logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
-          - metricTemplateName: missionfailmetric
+          - metricTemplateName: promwithagent-promtempqa
             metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "logsplusmetrics,{{args.baseline-hash}},issuegenqa"
             canaryMetricScope: "logsplusmetrics,{{args.canary-hash}},issuegenqa"
