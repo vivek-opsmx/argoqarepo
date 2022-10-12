@@ -1,26 +1,11 @@
-apiVersion: v1
 kind: Service
+apiVersion: v1
 metadata:
-  annotations:
-    cloud.google.com/neg: '{"ingress":true}'
-  finalizers:
-  - service.kubernetes.io/load-balancer-cleanup
-  labels:
-    app.kubernetes.io/managed-by: spinnaker
-    app.kubernetes.io/name: sampleapp
   name: issuegenqa
 spec:
-  externalTrafficPolicy: Cluster
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
-  ports:
-  - name: baseline
-    nodePort: 30900
-    port: 8088
-    protocol: TCP
-    targetPort: 8088
   selector:
     app: issuegenqa
-  sessionAffinity: None
-  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8088
