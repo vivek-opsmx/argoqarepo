@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: testapp
+spec:
+  metrics:
+    - name: testapp
+      provider:
+        opsmx:
+          profile: "opsmx-profile"
+          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          user: admin
+          application: intervalanalysisapp1
+          baselineStartTime: "2022-11-10T16:58:48.722Z"
+          canaryStartTime: "2022-11-10T16:58:48.722Z"
+          lifetimeMinutes: 6
+          threshold: 
+            pass: 80
+            marginal: 60
+          services:
+          - metricTemplateName: intervalanalysismetricremp
+            metricScopeVariables: "namespace_key"
+            baselineMetricScope: "issuegen-baseline"
+            canaryMetricScope: "issuegen-canary"
+            logTemplateName: intervalanalysislogtemp
+            logScopeVariables: "kubernetes.container_name"
+            baselineLogScope: "issuegen-baseline"
+            canaryLogScope: "issuegen-canary"
