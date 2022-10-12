@@ -15,6 +15,7 @@ spec:
           profile: opsmx-profile
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           application: intervalanaysisbyqa
+          lifetimeMinutes: 9
           user: admin
           intervalTime: 3
           lookBackType: growing
