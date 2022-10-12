@@ -14,7 +14,7 @@ spec:
         opsmx:
           profile: opsmx-profile
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
-          application: intervaltests
+          application: liveintervals
           user: admin
           lifetimeMinutes: 9
           intervalTime: 3
@@ -28,8 +28,7 @@ spec:
           - logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
-            metricTemplateName: "prominterval"
-            metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+          - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
             canaryMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
             
