@@ -12,7 +12,7 @@ spec:
       initialDelay: 10s
       provider:
         opsmx:
-          profile: opsmx-profile
+          profile: opsmx-profile-v3
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           application: intervalanaysisbyqa
           lifetimeMinutes: 9
