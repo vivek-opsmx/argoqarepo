@@ -15,7 +15,7 @@ spec:
           profile: opsmx-profile
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           application: newlivetestdata
-          lifetimeMinutes: 6
+          lifetimeMinutes: 9
           user: admin
           intervalTime: 3
           lookBackType: growing
