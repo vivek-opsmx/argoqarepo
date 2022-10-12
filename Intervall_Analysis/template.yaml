@@ -29,6 +29,6 @@ spec:
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
           - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
-            canaryMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
+            baselineMetricScope: "logsplusmetrics,{{args.baseline-hash}},demoapp-issuegen"
+            canaryMetricScope: "logsplusmetrics,{{args.baseline-hash}},demoapp-issuegen"
             
