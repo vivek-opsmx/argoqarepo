@@ -30,6 +30,6 @@ spec:
             canaryLogScope: ".*{{args.canary-hash}}.*"
             metricTemplateName: "prominterval"
             metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "argocd,{{args.baseline-hash}},issuegenqa"
-            canaryMetricScope: "argocd,{{args.canary-hash}},issuegenqa"
+            baselineMetricScope: "guestbook,{{args.baseline-hash}},issuegenqa"
+            canaryMetricScope: "guestbook,{{args.canary-hash}},issuegenqa"
             
