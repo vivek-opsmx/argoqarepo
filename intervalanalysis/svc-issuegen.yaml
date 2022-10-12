@@ -8,7 +8,7 @@ metadata:
   labels:
     app.kubernetes.io/managed-by: spinnaker
     app.kubernetes.io/name: sampleapp
-  name: issuegen
+  name: issuegenqa
 spec:
   externalTrafficPolicy: Cluster
   ipFamilies:
@@ -21,6 +21,6 @@ spec:
     protocol: TCP
     targetPort: 8088
   selector:
-    app: issuegen
+    app: issuegenqa
   sessionAffinity: None
   type: LoadBalancer
