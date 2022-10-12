@@ -23,7 +23,7 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - logTemplateName:mkrlogtemp
+          - logTemplateName: mkrlogtemp
             logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
