@@ -23,11 +23,11 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - logTemplateName: mkrlogtemp
+          - logTemplateName: logtemp
             logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
-          - metricTemplateName: prominterval
+          - metricTemplateName: missionfailmetric
             metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "logsplusmetrics,{{args.baseline-hash}},issuegenqa"
             canaryMetricScope: "logsplusmetrics,{{args.canary-hash}},issuegenqa"
