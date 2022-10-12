@@ -23,7 +23,7 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - logTemplateName: intervalanalysislogtemp
+          - logTemplateName: freshelk
             logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
