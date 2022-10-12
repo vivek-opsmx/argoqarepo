@@ -16,7 +16,6 @@ spec:
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           application: intervalanaysisbyqa
           user: admin
-          lifetimeMinutes: 9
           intervalTime: 3
           lookBackType: growing
           threshold:
