@@ -26,11 +26,11 @@ spec:
             marginal: 60
           services:
           - logTemplateName: logtemp
-            logScopeVariables: "kubernetes.pod_name"
-            baselineLogScope: ".*{{args.baseline-hash}}.*"
-            canaryLogScope: ".*{{args.canary-hash}}.*"
+            logScopeVariables: "kubernetes.container_name"
+            baselineLogScope: "issuegen-baseline"
+            canaryLogScope: "issuegen-canary"
             metricTemplateName: promtemp
-            metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "logsplusmetrics,{{args.baseline-hash}},issuegenqa"
-            canaryMetricScope: "logsplusmetrics,{{args.canary-hash}},issuegenqa"
+            metricScopeVariables: "container"
+            baselineMetricScope: "issuegen-baseline"
+            canaryMetricScope: "issuegen-canary"
             
