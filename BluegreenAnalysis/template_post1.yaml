@@ -21,7 +21,7 @@ spec:
             marginal: 60
           services:
           - serviceName: 
-            metricTemplateName: prometheusbluegreenanalysis
-            metricScopeVariables: "namespace_key,pod_key"
-            baselineMetricScope: "argocd,.*5ffd47b8d4.*" 
-            canaryMetricScope: "argocd,.*{{args.preview-hash}}.*"
+            logTemplateName: mkrlogtemp
+            logScopeVariables: "kubernetes.container_name"
+            baselineLogScope: "baseapp-rest-1" 
+            canaryLogScope: "canaryapp-rest-1"
