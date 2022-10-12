@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: demoapp-issuegen
+  name: issuegenqa
 spec:
   replicas: 4
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: issuegen
+      app: issuegenqa
   template:
     metadata:
       annotations:
@@ -15,7 +15,7 @@ spec:
         prometheus_io_path: '/mgmt/prometheus'
         prometheus_io_port: '8088'    
       labels:
-        app: issuegen
+        app: issuegenqa
     spec:
       containers:
         - name: rollouts-baseline
