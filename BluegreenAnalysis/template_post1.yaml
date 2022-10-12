@@ -15,14 +15,14 @@ spec:
           application: bluegreenrollout
           user: admin
           lifetimeMinutes: 3
-          baselineStartTime: "2021-11-03T11:29:46.915Z"
-          canaryStartTime: "2021-11-03T11:29:46.915Z"
+          baselineStartTime: "2022-11-10T16:58:48.722Z"
+          canaryStartTime: "2022-11-10T16:58:48.722Z"
           threshold:
             pass: 80
             marginal: 60
           services:
           - serviceName: 
-            logTemplateName: mkrlogtemp
+            logTemplateName: newelkgiri
             logScopeVariables: "kubernetes.container_name"
-            baselineLogScope: "baseapp-rest-1" 
-            canaryLogScope: "canaryapp-rest-1"
+            baselineLogScope: "issuegen-baseline" 
+            canaryLogScope: "issuegen-canary"
