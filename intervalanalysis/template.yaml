@@ -14,7 +14,7 @@ spec:
         opsmx:
           profile: opsmx-profile-v3
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
-          application: intervalanaysisbyqa
+          application: rajtest
           lifetimeMinutes: 9
           user: admin
           intervalTime: 3
