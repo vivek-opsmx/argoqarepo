@@ -29,6 +29,6 @@ spec:
             canaryLogScope: ".*{{args.canary-hash}}.*"
           - metricTemplateName: promwithagent-promtempqa
             metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "logsplusmetrics,{{args.baseline-hash}},issuegenqa"
-            canaryMetricScope: "logsplusmetrics,{{args.canary-hash}},issuegenqa"
+            baselineMetricScope: "guestbook1,{{args.baseline-hash}},issuegenqa"
+            canaryMetricScope: "guestbook1,{{args.canary-hash}},issuegenqa"
             
