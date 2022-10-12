@@ -1,0 +1,34 @@
+kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: sj-analysis
+spec:
+  args:
+    - name: canary-hash
+    - name: baseline-hash
+  metrics:
+    - name: sj-analysis
+      count: 1
+      initialDelay: 10s
+      provider:
+        opsmx:
+          profile: opsmx-profile
+          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          application: logmetriccombo
+          lifetimeMinutes: 9
+          user: admin
+          intervalTime: 3
+          lookBackType: growing
+          threshold:
+            pass: 80
+            marginal: 60
+          services:
+          - logTemplateName: logtemp
+            logScopeVariables: "kubernetes.pod_name"
+            baselineLogScope: ".*{{args.baseline-hash}}.*"
+            canaryLogScope: ".*{{args.canary-hash}}.*"
+            metricTemplateName: DATADOG
+            metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+            baselineMetricScope: "logsplusmetrics,{{args.baseline-hash}},issuegenqa"
+            canaryMetricScope: "logsplusmetrics,{{args.canary-hash}},issuegenqa"
+            
