@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: demoapp-issuegen
+  name: issuegentest
 spec:
   selector:
-    app: demoapp-issuegen
+    app: issuegentest
   ports:
   - protocol: TCP
     port: 80
