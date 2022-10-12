@@ -14,6 +14,8 @@ spec:
           baselineStartTime: "2022-11-10T16:58:48.722Z"
           canaryStartTime: "2022-11-10T16:58:48.722Z"
           lifetimeMinutes: 6
+          intervalTime: 3
+          lookBackType: growing
           threshold: 
             pass: 80
             marginal: 60
