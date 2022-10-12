@@ -14,7 +14,7 @@ spec:
         opsmx:
           profile: opsmx-profile
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
-          application: analysistest22
+          application: analysisraj
           lifetimeMinutes: 9
           user: admin
           intervalTime: 3
@@ -29,6 +29,6 @@ spec:
             canaryLogScope: ".*{{args.canary-hash}}.*"
           - metricTemplateName: promwithagent-promtempqa
             metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "logsplusmetrics,{{args.baseline-hash}},issuegenqa"
-            canaryMetricScope: "logsplusmetrics,{{args.canary-hash}},issuegenqa"
+            baselineMetricScope: "logsplusmetrics1,{{args.baseline-hash}},issuegenqa"
+            canaryMetricScope: "logsplusmetrics1,{{args.canary-hash}},issuegenqa"
             
