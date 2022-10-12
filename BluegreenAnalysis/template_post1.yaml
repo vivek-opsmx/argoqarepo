@@ -15,7 +15,7 @@ spec:
           application: bluegreenrollout
           user: admin
           lifetimeMinutes: 3
-          baselineStartTime: "2022-11-10T16:58:48.722Z"
+          baselineStartTime: "2022-09-26T13:15:35Z"
           threshold:
             pass: 80
             marginal: 60
