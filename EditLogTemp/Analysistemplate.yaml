@@ -1,0 +1,26 @@
+kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: oes-analysis
+spec:
+  args:
+    - name: experiment-hash
+  metrics:
+    - name: oes-analysis
+      provider:
+        opsmx:
+          profile: "opsmx-profile"
+          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          application: editlogapp
+          baselineStartTime: "2021-11-03T11:29:46.915Z"
+          canaryStartTime: "2021-11-03T11:29:46.915Z" 
+          user: admin
+          lifetimeMinutes: 6
+          threshold:
+            pass: 80
+            marginal: 60
+          services:
+          - logTemplateName: edittemp
+            logScopeVariables: "kubernetes.container_name"
+            baselineLogScope: "baseapp-rest-1"
+            canaryLogScope: "canaryapp-rest-1"
