@@ -20,7 +20,7 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - logTemplateName: infotemp
+          - logTemplateName: infoscoringtemp1
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
