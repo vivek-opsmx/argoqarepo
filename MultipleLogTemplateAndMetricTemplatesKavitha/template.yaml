@@ -67,4 +67,9 @@ spec:
             metricScopeVariables: "app_key,pod_key"
             baselineMetricScope: "issugen-baseline,6944b5c7df"
             canaryMetricScope: "issugen-baseline,76f78f85ff"
-            serviceName: "metricTemplateSerice1"
+            serviceName: "metricTemplateNewRelicService1"
+          - metricTemplateName: metrictemplateNewrelic
+            metricScopeVariables: "app_key,pod_key"
+            baselineMetricScope: "issugen-baseline,6944b5c7df"
+            canaryMetricScope: "issugen-baseline,76f78f85ff"
+            serviceName: "metricTemplateNewRelicSerice2"
