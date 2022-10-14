@@ -12,7 +12,7 @@ spec:
           profile: "opsmx-profile"
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           application: autobaseline
-          canaryStartTime: "2021-11-03T11:29:46.915Z" 
+          baselineStartTime: "2021-11-03T11:29:46.915Z" 
           user: admin
           lifetimeMinutes: 6
           threshold:
