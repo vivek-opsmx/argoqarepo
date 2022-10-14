@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: argotestsss
+  name: argotests
 spec:
   replicas: 4
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: argotestsss
+      app: argotests
   template:
     metadata:
       annotations:
@@ -15,11 +15,11 @@ spec:
         prometheus_io_path: '/mgmt/prometheus'
         prometheus_io_port: '8088'    
       labels:
-        app: argotestsss
+        app: argotests
     spec:
       containers:
         - name: rollouts-baseline
-          image: docker.io/opsmxdev/issuegen:v3.0.8
+          image: docker.io/opsmxdev/issuegen:v3.0.9
           imagePullPolicy: Always
           ports:
             - containerPort: 8088
