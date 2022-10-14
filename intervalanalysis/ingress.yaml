@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: issuegenqa
+  name: issugen-ingress
   annotations:
     ingress.kubernetes.io/proxy-body-size: 100M
     kubernetes.io/ingress.class: nginx
