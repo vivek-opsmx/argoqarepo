@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: testappsss
+  name: testapps
 spec:
   metrics:
-    - name: testappsss
+    - name: testapps
       provider:
         opsmx:
           profile: "opsmx-profile"
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           user: admin
-          application: argocd-qa01-37557
+          application: argocd-qa01-multi-service-with-log-metric-kavitha-71903
           baselineStartTime: "2022-09-16T06:10:00Z"
           canaryStartTime: "2022-09-19T08:06:00Z"
           lifetimeMinutes: 6
@@ -67,3 +67,4 @@ spec:
             metricScopeVariables: "app_key,pod_key"
             baselineMetricScope: "issugen-baseline,6944b5c7df"
             canaryMetricScope: "issugen-baseline,76f78f85ff"
+            serviceName: "metricTemplateSerice1"
