@@ -14,7 +14,7 @@ spec:
         opsmx:
           profile: opsmx-profile
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
-          application: qaliveintervals
+          application: intervalapp1
           lifetimeMinutes: 9
           user: admin
           intervalTime: 3
