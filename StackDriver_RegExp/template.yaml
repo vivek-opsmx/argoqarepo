@@ -13,10 +13,10 @@ spec:
       provider:
         opsmx:
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
-          application: sdapp
+          application: stackdriverreg1
           baselineStartTime: "2022-10-04T10:10:09Z"
           canaryStartTime: "2022-10-04T10:10:09Z"
-          user: admin
+          user: user2
           lifetimeMinutes: "3"
           threshold:
             pass: 80
