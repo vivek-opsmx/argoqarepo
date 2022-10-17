@@ -19,7 +19,7 @@ spec:
             marginal: 60
           services:
           - logTemplateName: logtemplateSplunk-kavitha
-            logScopeVariables: " kubernetes.container_name"
+            logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "oes-platform-br"
             canaryLogScope: "oes-platform-cr"
-            serviceName: "splunkservicewithlogtemplate"          
+            serviceName: "splunkservicewithlogtemplate"      
