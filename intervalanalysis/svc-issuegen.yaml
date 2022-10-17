@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: issuegenqa
+  name: issuegenqass
 spec:
   selector:
-    app: issuegenqa
+    app: issuegenqass
   ports:
   - protocol: TCP
     port: 80
