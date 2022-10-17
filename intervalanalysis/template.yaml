@@ -14,7 +14,7 @@ spec:
         opsmx:
           profile: opsmx-profile
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
-          application: liveqa1
+          application: liveapp
           lifetimeMinutes: 9
           user: admin
           intervalTime: 3
