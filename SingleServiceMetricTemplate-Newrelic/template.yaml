@@ -20,5 +20,5 @@ spec:
           services:
           - metricTemplateName: newrelicmetrictemp01
             metricScopeVariables: "app_key,pod_key"
-            baselineMetricScope: "issugen-baseline,6944b5c7df"
-            canaryMetricScope: "issugen-baseline,76f78f85ff"
+            baselineMetricScope: "issugen-baseline,{{args.baseline-hash}}"
+            canaryMetricScope: "issugen-canary,{{args.canary-hash}}"
