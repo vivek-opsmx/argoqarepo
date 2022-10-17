@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: sd-ss1-canary
 spec:
-  replicas: 4
+  replicas: 1
   revisionHistoryLimit: 2
   selector:
     matchLabels:
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: sd-ss1-app-v1
-          image: quay.io/opsmxpublic/canary-issuegen:issue-canary-gen-1401
+          image: quay.io/opsmxpublic/canary-issuegen:issue-canary-gen-1402
           imagePullPolicy: Always
           ports:
             - containerPort: 8088
