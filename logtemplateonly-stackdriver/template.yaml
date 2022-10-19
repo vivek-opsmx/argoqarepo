@@ -8,9 +8,9 @@ spec:
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://isdargo-test.ninja-test.opsmx.net/
+          gateUrl: https://sai.isd.ninja-test.opsmx.net/
           user: admin
-          application: testapp
+          application: testhelm
           baselineStartTime: "2022-08-20T13:15:00Z"
           lifetimeMinutes: 6
           threshold: 
