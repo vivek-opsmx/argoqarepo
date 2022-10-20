@@ -12,10 +12,10 @@ spec:
       initialDelay: 30s
       provider:
         opsmx:
-          gateUrl: https://isd-dev.argo-dev.opsmx.net/
+          gateUrl: https://argoisdv1.ninja-test.opsmx.net/
           application: newreliccustomappl
           user: admin
-          lifetimeHours: "0.05"
+          lifetimeMinutes: "6"
           baselineStartTime: "2022-09-16T04:17:00.002Z"
           canaryStartTime: "2022-09-19T04:17:00.002Z"
           threshold:
