@@ -30,7 +30,7 @@ spec:
                 requiredForCompletion: true
                 templateName: testapp
             templates:
-              - name: baseline
+              - name: metric25
                 specRef: stable
               - name: canary
                 specRef: canary
@@ -42,7 +42,7 @@ spec:
                 requiredForCompletion: true
                 templateName: testapp
             templates:
-              - name: baseline
+              - name: metric25
                 specRef: stable
               - name: canary
                 specRef: canary
