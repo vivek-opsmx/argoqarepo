@@ -35,9 +35,9 @@ spec:
               - name: canary
                 specRef: canary
             analyses:
-              - name : oes-analysis
+              - name : oes-analysisqa
                 requiredForCompletion: true
-                templateName: oes-analysis
+                templateName: oes-analysisqa
                 args:
                   - name: experiment-hash
                     valueFrom:
@@ -51,9 +51,9 @@ spec:
               - name: canary
                 specRef: canary
             analyses:
-              - name : oes-analysis
+              - name : oes-analysisqa
                 requiredForCompletion: true
-                templateName: oes-analysis
+                templateName: oes-analysisqa
                 args:
                   - name: experiment-hash
                     valueFrom: 
