@@ -10,7 +10,7 @@ spec:
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
+          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           application: logandmetricelkdd
           baselineStartTime: "2021-11-03T11:29:46.915Z"
           canaryStartTime: "2021-11-03T11:29:46.915Z" 
