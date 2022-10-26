@@ -1,12 +1,12 @@
 kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: oes-analysis
+  name: oes-analysisqa
 spec:
   args:
     - name: experiment-hash
   metrics:
-    - name: oes-analysis
+    - name: oes-analysisqa
       provider:
         opsmx:
           profile: "opsmx-profile"
