@@ -20,7 +20,7 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - logTemplateName: edittempbj
+          - logTemplateName: edittempbjxx
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
