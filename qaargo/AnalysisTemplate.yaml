@@ -16,7 +16,7 @@ spec:
           baselineStartTime: "2021-09-03T11:29:46.915Z"
           canaryStartTime: "2021-09-03T11:29:46.915Z"
           application:  analysistestapplication
-          user: admin
+          user: user2
           lifetimeMinutes: 6
           threshold:
             pass: 80
