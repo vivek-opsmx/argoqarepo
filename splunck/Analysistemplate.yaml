@@ -15,8 +15,8 @@ spec:
           canaryStartTime: "2022-03-08T10:46:00Z"
           lifetimeMinutes: 6
           threshold: 
-            pass: 80
-            marginal: 60
+            pass: 30
+            marginal: 20
           services:
           - logTemplateName: splunktemp1
             logScopeVariables: " kubernetes.container_name"
