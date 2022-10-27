@@ -9,8 +9,8 @@ spec:
         opsmx:
           profile: "opsmx-profile"
           gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
-          user: admin
-          application: prom1
+          user: user2
+          application: promtest1123
           baselineStartTime: "2022-10-26T13:00:00Z"
           canaryStartTime: "2022-10-26T13:00:00Z"
           lifetimeMinutes: 30
@@ -18,7 +18,7 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: promtemp1
+          - metricTemplateName: promtemp12
             metricScopeVariables: "job_name"
             baselineMetricScope: "baseline-redis"
             canaryMetricScope: "baseline-redis"
