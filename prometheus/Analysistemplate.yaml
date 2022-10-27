@@ -20,5 +20,5 @@ spec:
           services:
           - metricTemplateName: promtemp1
             metricScopeVariables: "job_name"
-            baselineMetricScope: "oes-autopilot-br"
-            canaryMetricScope: "oes-autopilot-cr"
+            baselineMetricScope: "baseline-redis"
+            canaryMetricScope: "baseline-redis"
