@@ -8,9 +8,9 @@ spec:
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
-          user: admin
-          application: splunckapp
+          gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
+          user: user2
+          application: splunktest1
           baselineStartTime: "2022-03-08T10:46:00Z"
           canaryStartTime: "2022-03-08T10:46:00Z"
           lifetimeMinutes: 6
@@ -18,7 +18,7 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - logTemplateName: splunktestcopy1
+          - logTemplateName: splunkint1
             logScopeVariables: " kubernetes.container_name"
             baselineLogScope: "oes-platform-br"
             canaryLogScope: "oes-platform-cr"
