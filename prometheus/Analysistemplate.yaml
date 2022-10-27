@@ -19,6 +19,6 @@ spec:
             marginal: 60
           services:
           - metricTemplateName: promtemp
-            metricScopeVariables: "job_name"
+            metricScopeVariables: "container"
             baselineMetricScope: "oes-autopilot-br"
             canaryMetricScope: "oes-autopilot-cr"
