@@ -12,7 +12,7 @@ spec:
       initialDelay: 10s
       provider:
         opsmx:
-          profile: opsmx-profile
+          profile: "opsmx-profile"
           gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
           application: promliveapp
           user: admin
