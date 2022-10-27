@@ -25,6 +25,6 @@ spec:
           services:
           - metricTemplateName: promtemp4
             metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "logsplusmetrics,{{args.baseline-hash}},demoapp-issuegen"
-            canaryMetricScope: "logsplusmetrics,{{args.baseline-hash}},demoapp-issuegen"
+            baselineMetricScope: "gitpr,{{args.baseline-hash}},demoapp-issuegen"
+            canaryMetricScope: "gitpr,{{args.baseline-hash}},demoapp-issuegen"
             
