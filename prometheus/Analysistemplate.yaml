@@ -11,14 +11,14 @@ spec:
           gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
           user: admin
           application: prom1
-          baselineStartTime: "2022-06-06T12:40:57Z"
-          canaryStartTime: "2022-06-06T12:40:57Z"
+          baselineStartTime: "2022-10-26T13:00:00Z"
+          canaryStartTime: "2022-10-26T13:00:00Z"
           lifetimeMinutes: 30
           threshold: 
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: promtemp
-            metricScopeVariables: "container"
+          - metricTemplateName: promtemp1
+            metricScopeVariables: "job_name"
             baselineMetricScope: "oes-autopilot-br"
             canaryMetricScope: "oes-autopilot-cr"
