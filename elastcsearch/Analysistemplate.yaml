@@ -16,6 +16,7 @@ spec:
           canaryStartTime: "2021-11-03T11:29:46.915Z" 
           user: user2
           lifetimeMinutes: 6
+          gitops: true
           threshold:
             pass: 80
             marginal: 60
