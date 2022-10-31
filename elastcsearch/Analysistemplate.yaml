@@ -11,7 +11,7 @@ spec:
         opsmx:
           profile: "opsmx-profile"
           gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
-          application: globtemp1
+          application: testgitops1
           baselineStartTime: "2021-11-03T11:29:46.915Z"
           canaryStartTime: "2021-11-03T11:29:46.915Z" 
           user: user2
