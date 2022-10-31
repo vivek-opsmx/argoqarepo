@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: oes-argo-rollout
+  name: rollouttest1
 spec:
   replicas: 1
   revisionHistoryLimit: 2
@@ -37,7 +37,7 @@ spec:
             analyses:
               - name : oes-analysis
                 requiredForCompletion: true
-                templateName: oes-analysis
+                templateName: analysistest1
                 args:
                   - name: experiment-hash
                     valueFrom:
@@ -51,9 +51,9 @@ spec:
               - name: canary
                 specRef: canary
             analyses:
-              - name : oes-analysis
+              - name : analysistest1
                 requiredForCompletion: true
-                templateName: oes-analysis
+                templateName: analysistest1
                 args:
                   - name: experiment-hash
                     valueFrom: 
