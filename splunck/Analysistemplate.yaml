@@ -8,7 +8,7 @@ spec:
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
+          gateUrl: https://argocd-gitpr.qa.opsmx.net/
           user: user2
           application: splunktest2
           baselineStartTime: "2022-03-08T10:46:00Z"
