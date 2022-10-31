@@ -1,15 +1,15 @@
 kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: oes-analysis
+  name: analysistest1
 spec:
   args:
     - name: experiment-hash
   metrics:
-    - name: oes-analysis
+    - name: analysistest1
       provider:
         opsmx:
-          profile: "opsmx-profile-v3"
+          profile: "opsmx-profile"
           gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
           application: testgitops1
           baselineStartTime: "2021-11-03T11:29:46.915Z"
