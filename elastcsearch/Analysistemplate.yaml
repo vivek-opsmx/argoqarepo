@@ -9,7 +9,7 @@ spec:
     - name: oes-analysis
       provider:
         opsmx:
-          profile: "opsmx-profile-v5"
+          profile: "opsmx-profile-v3"
           gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
           application: testgitops1
           baselineStartTime: "2021-11-03T11:29:46.915Z"
