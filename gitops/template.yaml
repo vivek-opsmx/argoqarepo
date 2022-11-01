@@ -12,7 +12,7 @@ spec:
       initialDelay: 10s    
       provider:
         opsmx:
-          profile: opsmx-profile
+          profile: opsmx-profile-new
           application: sanitytest
           user: admin
           lifetimeMinutes: 3
