@@ -21,7 +21,8 @@ spec:
             pass: 60
             marginal: 40   
           services:
-          - metricTemplateName: "metrictemplate-01"
-            metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "argocd,{{args.baseline-hash}},tmpl-gitops"
-            canaryMetricScope: "argocd,{{args.canary-hash}},tmpl-gitops"
+          - logTemplateName: logtemplate-01
+            logScopeVariables: "kubernetes.container_name"
+            baselineLogScope: "baseapp-rest-1"
+            canaryLogScope: "canaryapp-rest-1"
+           
