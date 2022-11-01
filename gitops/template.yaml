@@ -1,0 +1,28 @@
+kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: tmpl-gitops
+spec:
+  args:
+    - name: canary-hash
+    - name: baseline-hash
+  metrics:
+    - name: canary-score
+      count: 1
+      initialDelay: 10s    
+      provider:
+        opsmx:
+          profile: opsmx-profile-v5
+          gateUrl: https://isd-dev.argo-dev.opsmx.net/
+          application: tmpl-gitops
+          user: admin
+          lifetimeMinutes: 3
+          gitops: true
+          threshold:
+            pass: 60
+            marginal: 40   
+          services:
+          - metricTemplateName: "metrictemplate-01"
+            metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+            baselineMetricScope: "argocd,{{args.baseline-hash}},tmpl-gitops"
+            canaryMetricScope: "argocd,{{args.canary-hash}},tmpl-gitops"
