@@ -39,7 +39,7 @@ spec:
     spec:
       containers:
       - name: tmpl-gitops
-        image: docker.io/opsmxdev/issuegen:v3.0.5
+        image: docker.io/opsmxdev/issuegen:v3.0.6
         ports:
         - name: http
           containerPort: 8088
