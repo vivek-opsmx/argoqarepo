@@ -13,8 +13,7 @@ spec:
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
-          application: promliveapp
+          application: promliveapp12
           user: admin
           lifetimeMinutes: 9
           intervalTime: 3
@@ -23,7 +22,7 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: promtemp4
+          - metricTemplateName: Prometheus
             metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "gitpr,{{args.baseline-hash}},demoapp-issuegen"
             canaryMetricScope: "gitpr,{{args.baseline-hash}},demoapp-issuegen"
