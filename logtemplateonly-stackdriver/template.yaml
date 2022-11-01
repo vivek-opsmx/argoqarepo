@@ -17,7 +17,7 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: promtemp12
+          - metricTemplateName: promtemp1
             metricScopeVariables: "job_name"
             baselineMetricScope: "baseline-redis"
             canaryMetricScope: "baseline-redis"
