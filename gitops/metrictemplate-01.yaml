@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: metrictemplate-01
+data: 
+ Template: ISDTemplate
+ TemplateType: Metric
+ Json: |
+  {
+   "filterKey": "${namespace_key},${pod_key},${app_name}",
+   "data": {
+     "percent_diff_threshold": "hard",
+      "isNormalize": false,
+      "groups": [
+       {
+        "metrics": [
+          {
+            "metricType": "ADVANCED",
+            "metricWeight": 1,
+            "nanStrategy": "Remove",
+            "accountName": "isd312-saas-prom",
+            "riskDirection": "HigherOrLower",
+            "customThresholdHigher": 80,
+            "name": "sum(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"})",
+            "criticality": "Normal",
+            "customThresholdLower": 80,
+            "watchlist": true
+          }
+        ],
+        "group": "Memory Usage By Pod Name"
+      }
+    ]
+  },
+  "templateName": "metrictemplate-01",
+  "isEdit": true,
+  "advancedProvider": "PROMETHEUS",
+  "versionNo": ""
+  }
