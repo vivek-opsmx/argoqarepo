@@ -12,8 +12,8 @@ spec:
       initialDelay: 10s    
       provider:
         opsmx:
-          profile: opsmx-profile
-          application: sanitytest
+          profile: opsmx-profile-new
+          application: sanitytest1
           user: admin
           lifetimeMinutes: 3
           gitops: true
