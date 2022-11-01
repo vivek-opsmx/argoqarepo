@@ -17,8 +17,8 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - logTemplateName: stackdriver
-            logScopeVariables: "kubernetes.container_name"
-            baselineLogScope: "baseapp-rest-1"
-            canaryLogScope: "canaryapp-rest-1"
+          - metricTemplateName: promtemp12
+            metricScopeVariables: "job_name"
+            baselineMetricScope: "baseline-redis"
+            canaryMetricScope: "baseline-redis"
 
