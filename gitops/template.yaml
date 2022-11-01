@@ -12,9 +12,8 @@ spec:
       initialDelay: 10s    
       provider:
         opsmx:
-          profile: opsmx-profile-v5
-          gateUrl: https://isd-dev.argo-dev.opsmx.net/
-          application: tmpl-gitops
+          profile: opsmx-profile
+          application: sanitytest
           user: admin
           lifetimeMinutes: 3
           gitops: true
