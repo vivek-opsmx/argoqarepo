@@ -8,7 +8,6 @@ spec:
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: http://localhost:8080/
           user: admin
           application: testapp12
           baselineStartTime: "2022-08-20T13:15:00Z"
