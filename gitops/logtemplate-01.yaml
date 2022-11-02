@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: elasticlogtemp-gitops
+  name: logtemplate-01
 data: 
  Template: ISDTemplate
  TemplateType: LOG
  Json: |
   {
-  "templateName": "elasticlogtemp-gitops",
+  "templateName": "logtemplate-01",
   "monitoringProvider": "ELASTICSEARCH",
   "scoringAlgorithm": "Canary",
   "accountName": "testelastic",
