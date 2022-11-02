@@ -14,8 +14,8 @@ spec:
         opsmx:
           profile: opsmx-profile
           application: testanalysisreport1
-          baselineStartTime: "2022-03-08T10:46:00Z"
-          canaryStartTime: "2022-03-08T10:46:00Z"
+          baselineStartTime: "2021-11-03T11:29:46.915Z"
+          canaryStartTime: "2021-11-03T11:29:46.915Z"
           user: user2
           lifetimeMinutes: 3
           gitops: true
