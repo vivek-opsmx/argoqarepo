@@ -13,7 +13,7 @@ spec:
       provider:
         opsmx:
           profile: opsmx-profile-new
-          application: testfor12
+          application: elastic-gitops
           user: admin
           lifetimeMinutes: 3
           gitops: true
