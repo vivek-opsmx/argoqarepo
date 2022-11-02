@@ -12,9 +12,9 @@ spec:
       initialDelay: 10s    
       provider:
         opsmx:
-          profile: opsmx-profile-new
-          application: testfor12
-          user: admin
+          profile: opsmx-profile
+          application: testanalysisreport1
+          user: user2
           lifetimeMinutes: 3
           gitops: true
           threshold:
