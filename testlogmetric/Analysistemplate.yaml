@@ -19,10 +19,6 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: metrictemplateprom1100
-            metricScopeVariables: "job_name"
-            baselineMetricScope: "baseline-redis"
-            canaryMetricScope: "baseline-redis"
           - logTemplateName: logtemplatesplunk1100
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "oes-platform-br"
