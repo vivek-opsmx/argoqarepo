@@ -9,7 +9,7 @@ spec:
         opsmx:
           profile: "opsmx-profile"
           user: admin
-          application: quicktest
+          application: testsecret
           baselineStartTime: "2022-08-20T13:15:00Z"
           lifetimeMinutes: 6
           threshold: 
