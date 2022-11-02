@@ -1,0 +1,48 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: argotest1104
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: argotest1104
+  template:
+    metadata:   
+      labels:
+        app: argotest1104
+    spec:
+      containers:
+        - name: rollouts-demo-exp
+          image: docker.io/opsmxdev/issuegen:v3.0.4
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8088
+  strategy:
+    canary:
+      steps:
+        - setWeight: 25
+        - pause: { duration: 45s }
+        - experiment:
+            analyses:
+              - name : testapp1104
+                requiredForCompletion: true
+                templateName: testapp1104
+            templates:
+              - name: baseline
+                specRef: stable
+              - name: canary
+                specRef: canary
+        - setWeight: 50
+        - pause: { duration: 45s }
+        - experiment:
+            analyses:
+              - name : testapp1104
+                requiredForCompletion: true
+                templateName: testapp1104
+            templates:
+              - name: baseline
+                specRef: stable
+              - name: canary
+                specRef: canary
