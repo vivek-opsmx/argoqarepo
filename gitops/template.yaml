@@ -14,6 +14,8 @@ spec:
         opsmx:
           profile: opsmx-profile
           application: testanalysisreport1
+          baselineStartTime: "2022-03-08T10:46:00Z"
+          canaryStartTime: "2022-03-08T10:46:00Z"
           user: user2
           lifetimeMinutes: 3
           gitops: true
@@ -21,7 +23,7 @@ spec:
             pass: 60
             marginal: 40   
           services:
-          - metricTemplateName: "metrictemplate-01"
-            metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "argocd,{{args.baseline-hash}},tmpl-gitops"
-            canaryMetricScope: "argocd,{{args.canary-hash}},tmpl-gitops"
+           - logTemplateName: logtemplate-01
+             logScopeVariables: "kubernetes.container_name"
+             baselineLogScope: "oes-platform-br"
+             canaryLogScope: "oes-platform-cr"
