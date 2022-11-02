@@ -13,7 +13,7 @@ spec:
       provider:
         opsmx:
           profile: "opsmx-profile"
-          application: promliveapp12
+          application: promtest
           user: admin
           lifetimeMinutes: 9
           intervalTime: 3
@@ -22,7 +22,7 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: promtemp1
+          - metricTemplateName: promtemp
             metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "gitpr,{{args.baseline-hash}},demoapp-issuegen"
             canaryMetricScope: "gitpr,{{args.baseline-hash}},demoapp-issuegen"
