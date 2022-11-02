@@ -14,6 +14,7 @@ spec:
           baselineStartTime: "2022-03-08T10:46:00Z"
           canaryStartTime: "2022-03-08T10:46:00Z"
           lifetimeMinutes: 6
+          gitops: true
           threshold: 
             pass: 30
             marginal: 20
