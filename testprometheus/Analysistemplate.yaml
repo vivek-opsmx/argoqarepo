@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: testapp
+  name: testapp1103
 spec:
   metrics:
-    - name: testapp
+    - name: testapp1103
       provider:
         opsmx:
           profile: "opsmx-profile"
           gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
           user: user2
-          application: promtest1123
+          application: metricgitops1100
           baselineStartTime: "2022-10-26T13:00:00Z"
           canaryStartTime: "2022-10-26T13:00:00Z"
           lifetimeMinutes: 30
