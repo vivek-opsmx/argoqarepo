@@ -9,7 +9,7 @@ spec:
     - name: analysistest1
       provider:
         opsmx:
-          profile: "opsmx-profile"
+          profile: "opsmx-profile-new"
           gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
           application: gitopslogtemp1
           baselineStartTime: "2021-11-03T11:29:46.915Z"
