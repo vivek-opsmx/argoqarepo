@@ -25,5 +25,5 @@ spec:
           services:
            - logTemplateName: logtemplate-01
              logScopeVariables: "kubernetes.container_name"
-             baselineLogScope: "oes-platform-br"
-             canaryLogScope: "oes-platform-cr"
+             baselineLogScope: "baseapp-rest-1"
+             canaryLogScope: "canaryapp-rest-1"
