@@ -12,8 +12,8 @@ spec:
       initialDelay: 10s    
       provider:
         opsmx:
-          profile: opsmx-profile
-          application: testanalysisreport1
+          profile: opsmx-profile-new
+          application: splunklogtest
           baselineStartTime: "2022-03-08T10:46:00Z"
           canaryStartTime: "2022-03-08T10:46:00Z"
           user: user2
