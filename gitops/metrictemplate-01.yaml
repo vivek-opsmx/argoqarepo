@@ -18,7 +18,7 @@ data:
             "metricType": "ADVANCED",
             "metricWeight": 1,
             "nanStrategy": "Remove",
-            "accountName": "isd312-saas-prom",
+            "accountName": "Prometheus",
             "riskDirection": "HigherOrLower",
             "customThresholdHigher": 80,
             "name": "sum(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"})",
