@@ -7,7 +7,7 @@ spec:
     - name: testapp1109
       provider:
         opsmx:
-          profile: "opsmx-profile-new"
+          profile: "opsmx-profile"
           gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
           user: user2
           application: testcd1
