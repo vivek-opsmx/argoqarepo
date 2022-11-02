@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: logtemplate-01
+  name: elasticlogtemp-gitops
 data: 
  Template: ISDTemplate
  TemplateType: LOG
