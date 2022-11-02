@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: argotest1103
+  name: argotest1104
 spec:
   replicas: 1
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: argotest1103
+      app: argotest1104
   template:
     metadata:   
       labels:
-        app: argotest1103
+        app: argotest1104
     spec:
       containers:
         - name: rollouts-demo-exp
@@ -26,9 +26,9 @@ spec:
         - pause: { duration: 45s }
         - experiment:
             analyses:
-              - name : testapp1103
+              - name : testapp1104
                 requiredForCompletion: true
-                templateName: testapp1103
+                templateName: testapp1104
             templates:
               - name: baseline
                 specRef: stable
@@ -38,9 +38,9 @@ spec:
         - pause: { duration: 45s }
         - experiment:
             analyses:
-              - name : testapp1103
+              - name : testapp1104
                 requiredForCompletion: true
-                templateName: testapp1103
+                templateName: testapp1104
             templates:
               - name: baseline
                 specRef: stable
