@@ -6,7 +6,7 @@ data:
  Template: ISDTemplate
  TemplateType: LOG
  Json: |
-   {
+  {
   "templateName": "elasticlogtemp-gitops",
   "monitoringProvider": "ELASTICSEARCH",
   "scoringAlgorithm": "Canary",
@@ -149,4 +149,4 @@ data:
   "applicationName": "",
   "emailId": "",
   "versionNo": "v1.0"
-}
+   }
