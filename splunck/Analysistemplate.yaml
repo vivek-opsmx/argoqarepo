@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: testapp1100
+  name: testapp1101
 spec:
   metrics:
-    - name: testapp1100
+    - name: testapp1101
       provider:
         opsmx:
           profile: "opsmx-profile"
           gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
           user: user2
-          application: splunktest1100
+          application: splunktestgitops1100
           baselineStartTime: "2022-03-08T10:46:00Z"
           canaryStartTime: "2022-03-08T10:46:00Z"
           lifetimeMinutes: 6
@@ -18,7 +18,7 @@ spec:
             pass: 30
             marginal: 20
           services:
-          - logTemplateName: splunktemp2
+          - logTemplateName: logtemplatesplunk1100
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "oes-platform-br"
             canaryLogScope: "oes-platform-cr"
