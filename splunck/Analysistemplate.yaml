@@ -19,7 +19,7 @@ spec:
             pass: 30
             marginal: 20
           services:
-          - logTemplateName:  splunktemp2
+          - logTemplateName:  logtemplatetest11
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "oes-platform-br"
             canaryLogScope: "oes-platform-cr"
