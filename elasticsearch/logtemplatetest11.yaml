@@ -8,9 +8,9 @@ data:
  Json: |
    {
     "templateName": "logtemplatetest11",
-    "monitoringProvider": "",
+    "monitoringProvider": "ELASTICSEARCH",
     "scoringAlgorithm": "Canary",
-    "accountName": "testelastic",
+    "accountName": "",
     "index": "test-*",
     "namespace": null,
     "regExFilter": false,
