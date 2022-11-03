@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: rollouts-demo-exp
-          image: docker.io/opsmxdev/issuegen:v3.0.7
+          image: docker.io/opsmxdev/issuegen:v3.0.3
           imagePullPolicy: Always
           ports:
             - containerPort: 8088
@@ -46,4 +46,3 @@ spec:
                 specRef: stable
               - name: canary
                 specRef: canary
-
