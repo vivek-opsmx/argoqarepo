@@ -7,7 +7,7 @@ data:
  TemplateType: LOG
  Json: |
    {
-    "templateName": "",
+    "templateName": "logtemplatetest11",
     "monitoringProvider": "ELASTICSEARCH",
     "scoringAlgorithm": "Canary",
     "accountName": "testelastic",
@@ -16,7 +16,7 @@ data:
     "regExFilter": false,
     "regExResponseKey": "",
     "regularExpression": "",
-    "filterKey": "kubernetes.container_name",
+    "filterKey": "",
     "autoBaseline": false,
     "sensitivity": "high",
     "tags": [],
