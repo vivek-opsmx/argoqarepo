@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: testapp1123
+  name: testapp11234
 spec:
   metrics:
-    - name: testapp1123
+    - name: testapp11234
       provider:
         opsmx:
           profile: "opsmx-profile"
