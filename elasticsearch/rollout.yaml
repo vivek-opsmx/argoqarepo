@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: argotest2234
+  name: argotest22344
 spec:
   replicas: 1
   revisionHistoryLimit: 2
@@ -35,9 +35,9 @@ spec:
               - name: canary
                 specRef: canary
             analyses:
-              - name : testapp2234
+              - name : testapp22344
                 requiredForCompletion: true
-                templateName: testapp2234
+                templateName: testapp22344
                 args:
                   - name: experiment-hash
                     valueFrom:
@@ -51,9 +51,9 @@ spec:
               - name: canary
                 specRef: canary
             analyses:
-              - name : testapp2234
+              - name : testapp22344
                 requiredForCompletion: true
-                templateName: testapp2234
+                templateName: testapp22344
                 args:
                   - name: experiment-hash
                     valueFrom: 
