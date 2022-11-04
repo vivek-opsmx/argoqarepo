@@ -10,16 +10,16 @@ spec:
           profile: "opsmx-profile"
           gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
           user: user2
-          application: gittempduptest1
+          application: testrclassification1
           baselineStartTime: "2022-03-08T10:46:00Z"
           canaryStartTime: "2022-03-08T10:46:00Z"
           lifetimeMinutes: 6
-          gitops: true
+          gitops: false
           threshold: 
             pass: 30
             marginal: 20
           services:
-          - logTemplateName:  logtemplatetest11
+          - logTemplateName: splunktemp2
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "oes-platform-br"
             canaryLogScope: "oes-platform-cr"
