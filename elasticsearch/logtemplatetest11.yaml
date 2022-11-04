@@ -1,26 +1,26 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: logtemplate-01
+  name: logtemplatetest11
 data: 
  Template: ISDTemplate
  TemplateType: LOG
  Json: |
-  {
-  "templateName": "logtemplate-01",
-  "monitoringProvider": "ELASTICSEARCH",
-  "scoringAlgorithm": "Canary",
-  "accountName": "testelastic",
-  "index": "test-log-*",
-  "namespace": null,
-  "regExFilter": false,
-  "regExResponseKey": "",
-  "regularExpression": "",
-  "filterKey": "kubernetes.container_name",
-  "autoBaseline": false,
-  "sensitivity": "high",
-  "tags": [],
-  "errorTopics": [
+   {
+    "templateName": "logtemplatetest11",
+    "monitoringProvider": "ELASTICSEARCH",
+    "scoringAlgorithm": "Canary",
+    "accountName": "testelastic",
+    "index": "",
+    "namespace": null,
+    "regExFilter": false,
+    "regExResponseKey": "",
+    "regularExpression": "",
+    "filterKey": "kubernetes.container_name",
+    "autoBaseline": false,
+    "sensitivity": "high",
+    "tags": [],
+    "errorTopics": [
     {
       "string": "OnOutOfMemoryError",
       "topic": "CRITICAL",
@@ -131,22 +131,22 @@ data:
       "topic": "WARN",
       "type": "default"
     }
-  ],
-  "responseKeywords": "log,message",
-  "logGroupName": "",
-  "logStreamName": "",
-  "region": "",
-  "verificationType": "VERIFICATION",
-  "testCaseKey": "",
-  "testSuiteKey": "",
-  "infoScoring": false,
-  "contextualCluster": false,
-  "contextualWindowSize": 25,
-  "tagEnabled": false,
-  "streamId": "",
-  "timestampKey": "",
-  "applicationId": 0,
-  "applicationName": "",
-  "emailId": "",
-  "versionNo": "v1.0"
-  }
+    ],
+    "responseKeywords": "",
+    "logGroupName": "",
+    "logStreamName": "",
+    "region": "",
+    "verificationType": "VERIFICATION",
+    "testCaseKey": "",
+    "testSuiteKey": "",
+    "infoScoring": false,
+    "contextualCluster": false,
+    "contextualWindowSize": 25,
+    "tagEnabled": false,
+    "streamId": "",
+    "timestampKey": "",
+    "applicationId": 0,
+    "applicationName": "",
+    "emailId": "",
+    "versionNo": "v1.0"
+    }

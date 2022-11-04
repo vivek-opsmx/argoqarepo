@@ -12,16 +12,18 @@ spec:
       initialDelay: 10s    
       provider:
         opsmx:
-          profile: opsmx-profile-new
-          application: testfor12
-          user: admin
+          profile: opsmx-profile
+          application: testmoretab
+          baselineStartTime: "2021-11-03T11:29:46.915Z"
+          canaryStartTime: "2021-11-03T11:29:46.915Z"
+          user: user2
           lifetimeMinutes: 3
           gitops: true
           threshold:
             pass: 60
             marginal: 40   
           services:
-          - metricTemplateName: "metrictemplate-01"
-            metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "argocd,{{args.baseline-hash}},tmpl-gitops"
-            canaryMetricScope: "argocd,{{args.canary-hash}},tmpl-gitops"
+           - logTemplateName: logtemplate-01
+             logScopeVariables: "kubernetes.container_name"
+             baselineLogScope: "baseapp-rest-1"
+             canaryLogScope: "canaryapp-rest-1"

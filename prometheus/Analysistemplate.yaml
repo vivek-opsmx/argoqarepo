@@ -1,24 +1,25 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: testapp
+  name: testapp1122
 spec:
   metrics:
-    - name: testapp
+    - name: testapp1122
       provider:
         opsmx:
           profile: "opsmx-profile"
           gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
           user: user2
-          application: promtest1123
+          application: testprometheus1
           baselineStartTime: "2022-10-26T13:00:00Z"
           canaryStartTime: "2022-10-26T13:00:00Z"
           lifetimeMinutes: 30
+          gitops: true
           threshold: 
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: promtemp12
+          - metricTemplateName: metrictemplateprom1100
             metricScopeVariables: "job_name"
             baselineMetricScope: "baseline-redis"
             canaryMetricScope: "baseline-redis"

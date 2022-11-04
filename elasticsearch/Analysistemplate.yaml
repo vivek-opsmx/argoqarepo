@@ -1,26 +1,27 @@
 kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: oes-analysisqa
+  name: testapp2234
 spec:
   args:
     - name: experiment-hash
   metrics:
-    - name: oes-analysisqa
+    - name: testapp2234
       provider:
         opsmx:
           profile: "opsmx-profile"
           gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
-          application: elasticapplication
+          application: gittempduptest2
           baselineStartTime: "2021-11-03T11:29:46.915Z"
           canaryStartTime: "2021-11-03T11:29:46.915Z" 
           user: user2
           lifetimeMinutes: 6
+          gitops: true
           threshold:
             pass: 80
             marginal: 60
           services:
-          - logTemplateName: elasticlogtemp
+          - logTemplateName: logtemplatetest11
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"

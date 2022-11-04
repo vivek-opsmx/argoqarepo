@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: oes-argo-rollout
+  name: argotest2234
 spec:
   replicas: 1
   revisionHistoryLimit: 2
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: rollouts-baseline
-          image: docker.io/opsmxdev/issuegen:v3.0.8
+          image: docker.io/opsmxdev/issuegen:v3.0.4
           imagePullPolicy: Always
           ports:
             - containerPort: 8088
@@ -35,9 +35,9 @@ spec:
               - name: canary
                 specRef: canary
             analyses:
-              - name : oes-analysisqa
+              - name : testapp2234
                 requiredForCompletion: true
-                templateName: oes-analysisqa
+                templateName: testapp2234
                 args:
                   - name: experiment-hash
                     valueFrom:
@@ -51,9 +51,9 @@ spec:
               - name: canary
                 specRef: canary
             analyses:
-              - name : oes-analysisqa
+              - name : testapp2234
                 requiredForCompletion: true
-                templateName: oes-analysisqa
+                templateName: testapp2234
                 args:
                   - name: experiment-hash
                     valueFrom: 

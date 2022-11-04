@@ -1,17 +1,17 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: logtemplate-01
+  name: logtemplatetest11
 data: 
  Template: ISDTemplate
  TemplateType: LOG
  Json: |
   {
-  "templateName": "logtemplate-01",
-  "monitoringProvider": "ELASTICSEARCH",
+  "templateName": "logtemplatetest11",
+  "monitoringProvider": "SPLUNK",
   "scoringAlgorithm": "Canary",
-  "accountName": "testelastic",
-  "index": "test-log-*",
+  "accountName": "testsplunk2",
+  "index": "fluentd",
   "namespace": null,
   "regExFilter": false,
   "regExResponseKey": "",
@@ -19,7 +19,9 @@ data:
   "filterKey": "kubernetes.container_name",
   "autoBaseline": false,
   "sensitivity": "high",
-  "tags": [],
+  "tags": [
+
+  ],
   "errorTopics": [
     {
       "string": "OnOutOfMemoryError",
