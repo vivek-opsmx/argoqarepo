@@ -1,17 +1,17 @@
 kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: testapp2234
+  name: testapp22344
 spec:
   args:
     - name: experiment-hash
   metrics:
-    - name: testapp2234
+    - name: testapp22344
       provider:
         opsmx:
           profile: "opsmx-profile"
           gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
-          application: gittempduptest2
+          application: testproject1
           baselineStartTime: "2021-11-03T11:29:46.915Z"
           canaryStartTime: "2021-11-03T11:29:46.915Z" 
           user: user2
