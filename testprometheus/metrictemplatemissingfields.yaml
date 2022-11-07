@@ -15,7 +15,7 @@ data:
       {
         "metrics": [
           {
-            "metricType": "",
+            "metricType": "ADVANCED",
             "metricWeight": 1,
             "nanStrategy": "Remove",
             "accountName": "promint1",
