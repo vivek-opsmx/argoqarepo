@@ -8,7 +8,6 @@ spec:
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
           user: admin
           application: graylog1
           baselineStartTime: "2022-02-07T08:15:37Z"
