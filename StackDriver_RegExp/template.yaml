@@ -12,7 +12,7 @@ spec:
       initialDelay: 10s
       provider:
         opsmx:
-          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
           application: stackdriverreg1
           baselineStartTime: "2022-10-04T10:10:09Z"
           canaryStartTime: "2022-10-04T10:10:09Z"
