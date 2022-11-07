@@ -19,7 +19,7 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: metrictemplateprom1100
+          - metricTemplateName: metrictemplateprominvalidfields
             metricScopeVariables: "job_name"
             baselineMetricScope: "baseline-redis"
             canaryMetricScope: "baseline-redis"
