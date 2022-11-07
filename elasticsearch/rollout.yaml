@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: argotest22344
+  name: rolloutreclasf123
 spec:
   replicas: 1
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: rollouts-demo-exp-2
+      app: rolloutreclasf123
   template:
     metadata:
       annotations:
@@ -15,7 +15,7 @@ spec:
         prometheus_io_path: '/mgmt/prometheus'
         prometheus_io_port: '8088'    
       labels:
-        app: rollouts-demo-exp-2
+        app: rolloutreclasf123
     spec:
       containers:
         - name: rollouts-baseline
@@ -35,9 +35,9 @@ spec:
               - name: canary
                 specRef: canary
             analyses:
-              - name : testapp22344
+              - name : testreclasf123
                 requiredForCompletion: true
-                templateName: testapp22344
+                templateName: testreclasf123
                 args:
                   - name: experiment-hash
                     valueFrom:
@@ -51,9 +51,9 @@ spec:
               - name: canary
                 specRef: canary
             analyses:
-              - name : testapp22344
+              - name : testreclasf123
                 requiredForCompletion: true
-                templateName: testapp22344
+                templateName: testreclasf123
                 args:
                   - name: experiment-hash
                     valueFrom: 
