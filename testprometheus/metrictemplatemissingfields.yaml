@@ -15,10 +15,10 @@ data:
       {
         "metrics": [
           {
-            "metricType": "ADVANCED",
+            "metricType": "",
             "metricWeight": 1,
             "nanStrategy": "Remove",
-            "accountName": "promint1",
+            "accountName": "",
             "riskDirection": "HigherOrLower",
             "customThresholdHigher": "10",
             "name": "container_memory_usage_bytes{container='job_name'}",
@@ -27,7 +27,7 @@ data:
             "watchlist": false
           }
         ],
-        "group": "q1"
+        "group": ""
       },
       {
         "metrics": [
