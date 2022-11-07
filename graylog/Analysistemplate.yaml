@@ -1,15 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: testapp
+  name: testgraylog1
 spec:
   metrics:
-    - name: testapp
+    - name: testgraylog1
       provider:
         opsmx:
           profile: "opsmx-profile"
-          user: admin
-          application: graylog1
+          gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
+          user: user2
+          application: graylogtesting1
           baselineStartTime: "2022-02-07T08:15:37Z"
           canaryStartTime: "2022-02-07T08:15:37Z"
           lifetimeMinutes: 6
