@@ -21,7 +21,7 @@ spec:
             marginal: 60
           services:
           - serviceName: service1
-            logTemplateName: teststack1
+            logTemplateName: teststack2
             logScopeVariables: "resource.labels.container_name"
             baselineLogScope: "issuegen-prod"
             canaryLogScope: "issuegen-prod"
