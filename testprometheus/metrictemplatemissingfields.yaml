@@ -1,0 +1,157 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: metrictemplatemissingfields
+data: 
+ Template: ISDTemplate
+ TemplateType: Metric
+ Json: |
+  {
+  "filterKey": "job_name",
+  "data": {
+    "percent_diff_threshold": "hard",
+    "isNormalize": false,
+    "groups": [
+      {
+        "metrics": [
+          {
+            "metricType": "ADVANCED",
+            "metricWeight": 1,
+            "nanStrategy": "Remove",
+            "accountName": "promint1",
+            "riskDirection": "HigherOrLower",
+            "customThresholdHigher": "10",
+            "name": "container_memory_usage_bytes{container='job_name'}",
+            "criticality": "Normal",
+            "customThresholdLower": "10",
+            "watchlist": false
+          }
+        ],
+        "group": "q1"
+      },
+      {
+        "metrics": [
+          {
+            "metricType": "ADVANCED",
+            "metricWeight": 1,
+            "nanStrategy": "Remove",
+            "accountName": "promint1",
+            "riskDirection": "HigherOrLower",
+            "customThresholdHigher": "10",
+            "name": "container_file_descriptors{container='job_name'}",
+            "criticality": "Normal",
+            "customThresholdLower": "10",
+            "watchlist": false
+          }
+        ],
+        "group": "q2"
+      },
+      {
+        "metrics": [
+          {
+            "metricType": "ADVANCED",
+            "metricWeight": 1,
+            "nanStrategy": "Remove",
+            "accountName": "promint1",
+            "riskDirection": "HigherOrLower",
+            "customThresholdHigher": "10",
+            "name": "rate(container_cpu_cfs_periods_total{container='job_name'}[1m])",
+            "criticality": "Normal",
+            "customThresholdLower": "10",
+            "watchlist": false
+          }
+        ],
+        "group": "q3"
+      },
+      {
+        "metrics": [
+          {
+            "metricType": "ADVANCED",
+            "metricWeight": 1,
+            "nanStrategy": "Remove",
+            "accountName": "promint1",
+            "riskDirection": "HigherOrLower",
+            "customThresholdHigher": "10",
+            "name": "rate(container_fs_reads_bytes_total{container='job_name'}[1m])",
+            "criticality": "Normal",
+            "customThresholdLower": "10",
+            "watchlist": false
+          }
+        ],
+        "group": "q4"
+      },
+      {
+        "metrics": [
+          {
+            "metricType": "ADVANCED",
+            "metricWeight": 1,
+            "nanStrategy": "Remove",
+            "accountName": "promint1",
+            "riskDirection": "HigherOrLower",
+            "customThresholdHigher": "10",
+            "name": "rate(container_cpu_load_average_10s{container='job_name'}[1m])",
+            "criticality": "Normal",
+            "customThresholdLower": "10",
+            "watchlist": false
+          }
+        ],
+        "group": "q5"
+      },
+      {
+        "metrics": [
+          {
+            "metricType": "ADVANCED",
+            "metricWeight": 1,
+            "nanStrategy": "Remove",
+            "accountName": "promint1",
+            "riskDirection": "HigherOrLower",
+            "customThresholdHigher": "10",
+            "name": "rate(container_cpu_usage_seconds_total{container='job_name'}[1m])",
+            "criticality": "Normal",
+            "customThresholdLower": "10",
+            "watchlist": false
+          }
+        ],
+        "group": "q6"
+      },
+      {
+        "metrics": [
+          {
+            "metricType": "ADVANCED",
+            "metricWeight": 1,
+            "nanStrategy": "Remove",
+            "accountName": "promint1",
+            "riskDirection": "HigherOrLower",
+            "customThresholdHigher": "10",
+            "name": "container_memory_max_usage_bytes{container='job_name'}",
+            "criticality": "Normal",
+            "customThresholdLower": "10",
+            "watchlist": false
+          }
+        ],
+        "group": "q7"
+      },
+      {
+        "metrics": [
+          {
+            "metricType": "ADVANCED",
+            "metricWeight": 1,
+            "nanStrategy": "Remove",
+            "accountName": "promint1",
+            "riskDirection": "HigherOrLower",
+            "customThresholdHigher": "10",
+            "name": "container_memory_failcnt{container='job_name'}",
+            "criticality": "Normal",
+            "customThresholdLower": "10",
+            "watchlist": false
+          }
+        ],
+        "group": "q8"
+      }
+    ]
+  },
+  "templateName": "metrictemplatemissingfields",
+  "isEdit": false,
+  "advancedProvider": "PROMETHEUS",
+  "versionNo": "v1.0"
+  }
