@@ -150,7 +150,6 @@ data:
       }
     ]
   },
-  "templateName": "",
   "isEdit": false,
   "advancedProvider": "PROMETHEUS",
   "versionNo": "v1.0"
