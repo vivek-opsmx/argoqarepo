@@ -7,7 +7,6 @@ data:
  TemplateType: Metric
  Json: |
   {
-  "filterKey": "",
   "data": {
     "percent_diff_threshold": "hard",
     "isNormalize": false,
