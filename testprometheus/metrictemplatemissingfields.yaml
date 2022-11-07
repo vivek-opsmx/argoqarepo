@@ -21,7 +21,7 @@ data:
             "accountName": "promint1",
             "riskDirection": "HigherOrLower",
             "customThresholdHigher": "10",
-            "name": "",
+            "name": "container_memory_usage_bytes{container='job_name'}",
             "criticality": "Normal",
             "customThresholdLower": "10",
             "watchlist": false
