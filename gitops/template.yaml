@@ -1,7 +1,7 @@
 kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: tmpl-gitops1
+  name: tmpl-gitops
 spec:
   args:
     - name: canary-hash
