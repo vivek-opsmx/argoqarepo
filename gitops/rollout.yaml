@@ -27,7 +27,7 @@ spec:
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: tmpl-gitops
+      app: tmpl-gitops1
   template:
     metadata:
       annotations:
@@ -35,11 +35,11 @@ spec:
         prometheus_io_path: '/mgmt/prometheus'
         prometheus_io_port: '8088'
       labels:
-        app: tmpl-gitops
+        app: tmpl-gitops1
     spec:
       containers:
-      - name: tmpl-gitops
-        image: docker.io/opsmxdev/issuegen:v3.0.8
+      - name: tmpl-gitops1
+        image: docker.io/opsmxdev/issuegen:v3.0.9
         ports:
         - name: http
           containerPort: 8088
