@@ -8,18 +8,18 @@ spec:
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://oes-argoqa.isd-dev.opsmx.net/
           user: user2
-          application: prometheustest12345
+          application: test-arog-rollout-extn-jay
           baselineStartTime: "2022-10-26T13:00:00Z"
           canaryStartTime: "2022-10-26T13:00:00Z"
           lifetimeMinutes: 30
-          gitops: true
+          gitops: false
           threshold: 
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: metrictemplateprom1100
+          - metricTemplateName: promwithagent-promtempqa
             metricScopeVariables: "job_name"
             baselineMetricScope: "baseline-redis"
             canaryMetricScope: "baseline-redis"
+
