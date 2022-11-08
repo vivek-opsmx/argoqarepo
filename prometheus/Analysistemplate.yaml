@@ -9,7 +9,7 @@ spec:
         opsmx:
           profile: "opsmx-profile"
           user: user2
-          application: test-arog-rollout-extn-jay
+          application: test-argo-rollout-extn-jay
           baselineStartTime: "2022-10-26T13:00:00Z"
           canaryStartTime: "2022-10-26T13:00:00Z"
           lifetimeMinutes: 30
