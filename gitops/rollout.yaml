@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: tmpl-gitops1
+  name: tmpl-gitops
 spec:
   replicas: 1
   strategy:
@@ -16,7 +16,7 @@ spec:
       - pause: { duration: 30s }
       - analysis:
           templates:
-            - templateName: tmpl-gitops1
+            - templateName: tmpl-gitops
           args:
             - name: canary-hash
               valueFrom:
@@ -27,7 +27,7 @@ spec:
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: tmpl-gitops1
+      app: tmpl-gitops
   template:
     metadata:
       annotations:
@@ -35,10 +35,10 @@ spec:
         prometheus_io_path: '/mgmt/prometheus'
         prometheus_io_port: '8088'
       labels:
-        app: tmpl-gitops1
+        app: tmpl-gitops
     spec:
       containers:
-      - name: tmpl-gitops1
+      - name: tmpl-gitops
         image: docker.io/opsmxdev/issuegen:v3.0.8
         ports:
         - name: http
