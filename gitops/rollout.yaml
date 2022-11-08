@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: tmpl-gitops
+  name: tmpl-gitops1
 spec:
   replicas: 1
   strategy:
@@ -16,7 +16,7 @@ spec:
       - pause: { duration: 30s }
       - analysis:
           templates:
-            - templateName: tmpl-gitops
+            - templateName: tmpl-gitops1
           args:
             - name: canary-hash
               valueFrom:
