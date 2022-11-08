@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: testdc4455
+  name: testdc4456
 spec:
   metrics:
-    - name: testdc4455
+    - name: testdc4456
       provider:
         opsmx:
           profile: "opsmx-profile"
           gateUrl: https://isd-argocd.isd-dev.opsmx.net/
           user: user2
-          application: testdc2
+          application: testdc3
           baselineStartTime: "2022-10-26T13:00:00Z"
           canaryStartTime: "2022-10-26T13:00:00Z"
           lifetimeMinutes: 30
