@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: argodc4455
+  name: argodc4456
 spec:
   replicas: 1
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: argodc4455
+      app: argodc4456
   template:
     metadata:   
       labels:
-        app: argodc4455
+        app: argodc4456
     spec:
       containers:
         - name: rollouts-demo-exp
@@ -26,9 +26,9 @@ spec:
         - pause: { duration: 45s }
         - experiment:
             analyses:
-              - name : testdc4455
+              - name : testdc4456
                 requiredForCompletion: true
-                templateName: testdc4455
+                templateName: testdc4456
             templates:
               - name: baseline
                 specRef: stable
@@ -38,9 +38,9 @@ spec:
         - pause: { duration: 45s }
         - experiment:
             analyses:
-              - name : testdc4455
+              - name : testdc4456
                 requiredForCompletion: true
-                templateName: testdc4455
+                templateName: testdc4456
             templates:
               - name: baseline
                 specRef: stable
