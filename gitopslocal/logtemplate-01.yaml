@@ -10,7 +10,7 @@ data:
   "templateName": "logtemplate-01",
   "monitoringProvider": "ELASTICSEARCH",
   "scoringAlgorithm": "Canary",
-  "accountName": "testelastic123",
+  "accountName": "testelastic",
   "index": "test-log-*",
   "namespace": null,
   "regExFilter": false,
