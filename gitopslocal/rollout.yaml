@@ -8,9 +8,6 @@ spec:
     canary:
       canaryService: tmpl-gitops-canary-svc
       stableService: tmpl-gitops-stable-svc
-      trafficRouting:
-        nginx:
-          stableIngress: tmpl-gitops-ing 
       steps:
       - setWeight: 50
       - pause: { duration: 30s }
