@@ -1,0 +1,29 @@
+kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: tmpl-gitops
+spec:
+  args:
+    - name: canary-hash
+    - name: baseline-hash
+  metrics:
+    - name: canary-score
+      count: 1
+      initialDelay: 10s    
+      provider:
+        opsmx:
+          profile: opsmx-profile
+          application: argoappqatestiuzqv
+          baselineStartTime: "2021-11-03T11:29:46.915Z"
+          canaryStartTime: "2021-11-03T11:29:46.915Z"
+          user: user2
+          lifetimeMinutes: 3
+          gitops: true
+          threshold:
+            pass: 60
+            marginal: 40   
+          services:
+           - logTemplateName: logtemplate-01
+             logScopeVariables: "kubernetes.container_name"
+             baselineLogScope: "baseapp-rest-1"
+             canaryLogScope: "canaryapp-rest-1"
