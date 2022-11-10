@@ -27,4 +27,4 @@ spec:
             logTemplateName: elk
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
-            canaryLogScope: "canaryapp-rest-1
+            canaryLogScope: "canaryapp-rest-1"
