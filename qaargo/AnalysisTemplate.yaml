@@ -10,8 +10,8 @@ spec:
       provider:
         opsmx:
           profile: "opsmx-profile"
-          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
-          application: logandmetricelkdd
+          gateUrl: https://isd-argocd.isd-dev.opsmx.net/
+          application: elkdd
           baselineStartTime: "2021-11-03T11:29:46.915Z"
           canaryStartTime: "2021-11-03T11:29:46.915Z" 
           user: user2
@@ -20,11 +20,11 @@ spec:
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: CUSTOMDatadog
+          - metricTemplateName: dd
             metricScopeVariables: "variable1"
             baselineMetricScope: "service:baseapp"
             canaryMetricScope: "service:canaryapp"
-            logTemplateName: RegularIsdTemp2
+            logTemplateName: elk
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1
