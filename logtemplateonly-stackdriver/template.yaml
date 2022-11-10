@@ -9,14 +9,14 @@ spec:
         opsmx:
           profile: "opsmx-profile"
           user: admin
-          application: testsecret
+          application: runanalysis
           baselineStartTime: "2022-08-20T13:15:00Z"
           lifetimeMinutes: 6
           threshold: 
             pass: 80
             marginal: 60
           services:
-          - logTemplateName: stackdriver
+          - logTemplateName: stacktemplateregex
             logScopeVariables: "kubernetes.container_name"
             baselineLogScope: "baseapp-rest-1"
             canaryLogScope: "canaryapp-rest-1"
