@@ -15,9 +15,9 @@ spec:
           profile: opsmx-profile
           gateUrl: https://isd-argocd.isd-dev.opsmx.net/
           application: intervalapp1
-          lifetimeMinutes: 9
+          lifetimeMinutes: 180
           user: admin
-          intervalTime: 3
+          intervalTime: 6
           lookBackType: sliding
           threshold:
             pass: 80
