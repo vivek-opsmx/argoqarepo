@@ -27,9 +27,6 @@ spec:
             logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
-            metricTemplateName: promwithagent-promtempqa
-            metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "argocd-gitpr,{{args.baseline-hash}},issuegenqa"
-            canaryMetricScope: "argocd-gitpr,{{args.canary-hash}},issuegenqa"
+            
             
             
