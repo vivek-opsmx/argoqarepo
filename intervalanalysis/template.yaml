@@ -13,7 +13,7 @@ spec:
       provider:
         opsmx:
           profile: opsmx-profile
-          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
+          gateUrl: https://isd-argocd.isd-dev.opsmx.net/
           application: intervalapp1
           lifetimeMinutes: 9
           user: admin
