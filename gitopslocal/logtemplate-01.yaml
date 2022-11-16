@@ -8,7 +8,7 @@ data:
  Json: |
   {
   "templateName": "logtemplate-01",
-  "monitoringProvider": "ELASTICSEARCH",
+  "monitoringProvider": "",
   "scoringAlgorithm": "Canary",
   "accountName": "testelastic",
   "index": "test-log-*",
