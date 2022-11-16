@@ -11,7 +11,7 @@ data:
   "monitoringProvider": "ELASTICSEARCH",
   "scoringAlgorithm": "Canary",
   "accountName": "testelastic",
-  "index": "",
+  "index": "test-log-*",
   "namespace": null,
   "regExFilter": false,
   "regExResponseKey": "",
